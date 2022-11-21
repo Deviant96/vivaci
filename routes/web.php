@@ -21,6 +21,7 @@ Route::get('/', 'App\Http\Controllers\HomeController@index');
 Route::get('/projects', function () {
     return view('projects');
 });
+Route::get('/projects/{slug}', 'App\Http\Controllers\ProjectsController@getProjectType')->where('slug', '([A-Za-z0-9\-\/]+)');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -55,5 +56,5 @@ Route::group(['prefix' => 'admin'], function () {
 // ])->where('slug', '([A-Za-z0-9\-\/]+)');
 
 // Route::get('/cart', 'CartController@index')->name('cart.index');
-Route::get('/project/{project}', 'App\Http\Controllers\ProjectsController@getProject')->where('project', '([A-Za-z0-9\-\/]+)');
+// Route::get('/project/{project}', 'App\Http\Controllers\ProjectsController@getProject')->where('project', '([A-Za-z0-9\-\/]+)');
 //->name('cart.store');

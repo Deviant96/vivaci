@@ -30,12 +30,6 @@
 
 </div>
 
-<style>
-    img:active {
-        width: 800px !important;
-    }
-</style>
-
 <div class="container">
     
     <div class="row">

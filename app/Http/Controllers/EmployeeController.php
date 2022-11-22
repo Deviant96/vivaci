@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Project;
 use App\Models\Employee;
 use App\Models\Team;
 
@@ -20,13 +19,14 @@ class EmployeeController extends Controller
 	{
 		// $employee = Employee::where('team', 'design'); // ->where('status', 'active');
 		// $employee = $employee->firstOrFail();
-        $employee = Employee::where('team', $team)->findOrFail(1)->get();
+		$details = Team::where('slug', $team)->firstOrFail();
+        $employee = Employee::where('team', $team)->get();
 
 		// return view($page->template)->with('page', $page);
         // $project = Project::where('slug', $team); // ->where('status', 'active');
 		// $employee = $employee->findOrFail(1);
 
 		// return view($page->template)->with('page', $page);
-		return view('aboutteam', ['em' => $employee]);
+		return view('aboutteam', ['em' => $employee])->with('details', $details);
 	}
 }

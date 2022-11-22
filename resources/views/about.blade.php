@@ -67,6 +67,7 @@
                                 style="min-height: 400px;max-height:400px;">
                             <h3 class="text-center mt-3">{{ $item->name }} Team</h3>
                             <p class="text-center">{!! $item->description !!}</p>
+                            <div class="text-center"><a class="primary-link" href="{{ url()->current() . "/" . $item->slug }}">View members</a></div>
                         </div>
                     </div>
                 @endforeach

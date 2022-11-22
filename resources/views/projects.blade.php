@@ -36,7 +36,7 @@
                                 <h5 class="card-title">{{ $project->title }}</h5>
                                 <p class="card-text">{!! $project->desc !!}</p>
 
-                                <a href="project/{{ $project->slug }}" class="btn btn-primary btn-sm">View</a>
+                                <a href="{{ url()->current() }}/{{ $project->slug }}" class="btn btn-primary btn-sm">View</a>
                             </div>
 
                         </div>

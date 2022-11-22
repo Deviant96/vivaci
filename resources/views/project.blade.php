@@ -2,11 +2,11 @@
 
 @section('content')
 
-<div class="container">
+<div class="container top-margin">
 
     <div class="row py-3 mt-3">
         <div class="col-6 d-flex flex-column justify-content-end">
-            <h1 class="fw-bold">{{ $project->title }}</h1>
+            <h2 class="fw-bold">{{ $project->title }}</h2>
             <div class="mb-0">{!! $project->desc !!}</div>
         </div>
         <div class="col-6 d-flex justify-content-end align-items-end">

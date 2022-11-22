@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +19,16 @@ Route::get('/', function () {
 });
 Route::get('/', 'App\Http\Controllers\HomeController@index');
 
-Route::get('/projects', function () {
-    return view('projects');
-});
-Route::get('/projects/{slug}', 'App\Http\Controllers\ProjectsController@getProjectType')->where('slug', '([A-Za-z0-9\-\/]+)');
+// Route::get('/projects', function () {
+//     return view('projects');
+// });
+// Route::get('/projects/{slug}', 'App\Http\Controllers\ProjectsController@getProjectType')->where('slug', '([A-Za-z0-9\-\/]+)');
+Route::get('/projects/{slug}/{title?}', 'App\Http\Controllers\ProjectsController@getProjectType'); //->where('slug', '([A-Za-z0-9\-\/]+)');
+
+// Route::controller(ProjectsController::class)->group(function () {
+//     Route::get('/projects/{slug}', 'getProjectType')->where('slug', '([A-Za-z0-9\-\/]+)');
+//     Route::get('/projects/{slug}/{title}', 'getProject')->where('title', '([A-Za-z0-9\-\/]+)');
+// });
 
 Route::get('/contact', function () {
     return view('contact');

@@ -18,5 +18,6 @@
         element.addEventListener('click', event => {
             modalImg.src = element.src;
         })
+        element.style.cursor = "pointer";
     });
 </script>

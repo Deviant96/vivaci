@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Employee;
+use App\Models\Team;
 
 class EmployeeController extends Controller
 {
     
     public function index()
 	{
-		$employee = Employee::where('team', '/')->first(); //->where('active', 1)->first();
-		return view('about-team')->with('about-team', $employee);
+		$employee = Team::get(); //->where('active', 1)->first();
+		return view('about')->with('employee', $employee);
 	}
 
 	public function getEmployee($team = null)

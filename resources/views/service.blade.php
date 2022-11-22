@@ -1,5 +1,8 @@
 @extends('layouts.layout')
 
+{{-- Image zooming component --}}
+@php($imageZoom = true)
+
 @section('content')
 
 <section>

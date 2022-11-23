@@ -11,7 +11,7 @@
 
                     <div style="width: 100%; height: 600px;">
                         <img style="max-height: 100%; width: 100%;object-fit: cover;"
-                            src="https://source.unsplash.com/1920x1080/?people" alt="Vivaci Living Teams" />
+                            src="{{ asset('/img/teams/allteam.jpg') }}" alt="Vivaci Living Teams" />
                     </div>
 
                     <div class="row d-flex justify-content-center py-5 mt-5">
@@ -39,18 +39,20 @@
             <div class="row">
                 <div class="col-6">
                     <div class="d-flex flex-column justify-content-center align-items-center">
-
-                        <img src="https://source.unsplash.com/500x600/?ceo+man" alt="Founder" style="max-height: 500px; min-height: 500px;">
-                        <h3 class="text-center mt-3">Founder Name</h3>
-                        <p class="text-center">The Founder</p>
+                        <div class="img-container w-100">
+                            <img src="{{ asset('/img/teams/founder.jpg') }}" alt="Founder">
+                        </div>
+                        <h3 class="text-center mt-3">Andrew Thomas Kading</h3>
+                        <p class="text-center">Founder</p>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex flex-column justify-content-center align-items-center">
-
-                        <img src="https://source.unsplash.com/500x600/?woman" alt="Co-Founder" style="max-height: 500px; min-height: 500px;">
-                        <h3 class="text-center mt-3">Co-Founder Name</h3>
-                        <p class="text-center">The Co Founder</p>
+                        <div class="img-container w-100">
+                            <img src="{{ asset('/img/teams/cofounder.jpg') }}" alt="Founder">
+                        </div>
+                        <h3 class="text-center mt-3">Lia Yuliana</h3>
+                        <p class="text-center">Co-Founder</p>
                     </div>
                 </div>
             </div>

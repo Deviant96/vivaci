@@ -119,9 +119,9 @@
                 @foreach($em as $service)
                     <div class="col-4">
                         <img src="{{Voyager::image($service->icon)}}" width="50" height="50" />
-                        <h3 class="mt-5">{{ $service->title }}r</h3>
+                        <h3 class="mt-5">{{ $service->title }}</h3>
                         <p>{{ $service->brief_description }}</p>
-                        <a href="{{ url('service'.$service->slug) }}" class="primary-link mt-3">Learn more</a>
+                        <a href="{{ url()->current() . "/" . $service->slug }}" class="primary-link mt-3">Learn more</a>
                     </div>
                 @endforeach
             </div>

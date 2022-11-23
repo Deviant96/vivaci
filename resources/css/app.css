@@ -6,6 +6,11 @@
     --nav-height: 90px;
 }
 
+::selection {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
 /* Whatsapp */
 .whatsapp {
     position: fixed;
@@ -45,10 +50,21 @@ p {
     font-family: 'Inter', sans-serif;
 }
 
+.font-big-one {
+    font-size: 4rem;
+    /* 64px */
+}
+
+.font-big-two {
+    font-size: 3rem;
+    /* 48px */
+}
+
 .font-para-one {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 1.125rem;
+    /* 18px */
 }
 
 a:hover {
@@ -64,6 +80,22 @@ a.primary-link {
     text-decoration: none;
     font-weight: bold;
     color: var(--primary-color);
+}
+
+/* Zoom Image on Hover */
+.img-container {
+    overflow: hidden;
+}
+.img-container > img {
+    transition: .5s all;
+-webkit-transition: .5s all;
+-moz-transition: .5s all;
+-o-transition: .5s all;
+-ms-transition: .5s all;
+
+}
+.img-container:hover > img {
+    transform: scale(1.15);
 }
 
 
@@ -100,6 +132,19 @@ a.primary-link {
 
 .carousel img {
     filter: brightness(0.2);
+    min-width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    pointer-events: none;
+}
+
+.carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.carousel-caption h5 {
+    font-size: 6rem;
 }
 
 .ra * {
@@ -142,7 +187,7 @@ a.primary-link {
     display: flex;
 }
 
-.socials > a {
+.socials>a {
     transform: scale(75%);
 
     width: 64px;
@@ -158,15 +203,15 @@ a.primary-link {
     align-items: center;
 }
 
-.socials > a:hover {
+.socials>a:hover {
     border-color: var(--primary-color);
 }
 
-.socials > a:hover svg {
+.socials>a:hover svg {
     fill: var(--primary-color);
 }
 
-.socials > a > svg {
+.socials>a>svg {
     max-width: 32px;
     max-height: 32px;
     translate: all .3s ease;

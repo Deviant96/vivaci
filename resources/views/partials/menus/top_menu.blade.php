@@ -59,6 +59,9 @@
             {!! $icon !!}
             <span>{{ $item->title }}</span>
             {!! $caret !!}
+            @if(!$originalItem->children->isEmpty())
+            <img src="{{ asset('/img/caret-down-outline.svg') }}" width="8" alt="" />
+            @endif
         </a>
         @if(!$originalItem->children->isEmpty())
         @include('partials.menus.top_menu', ['items' => $originalItem->children, 'options' => $options, 'innerLoop' => true])

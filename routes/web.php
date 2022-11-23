@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,9 @@ use App\Http\Controllers\ProjectsController;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+// Route::get('/', function () {
+//     return view('main');
+// });
 Route::get('/', 'App\Http\Controllers\HomeController@index');
 
 // Route::get('/projects', function () {
@@ -34,15 +35,19 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/about', function () {
+//     // return view('about');
+//     return view('abt');
+// });
 
 Route::get('/services', function () {
     return view('services');
 });
 
-Route::get('/about/{team}', 'App\Http\Controllers\EmployeeController@getEmployee')->where('team', '([A-Za-z0-9\-\/]+)');
+Route::controller(EmployeeController::class)->group(function () {
+    Route::get('/about', 'index');
+    Route::get('/about/{team}', 'getEmployee')->where('title', '([A-Za-z0-9\-\/]+)');
+});
 
 // Route::get('/about-team', function () {
 //     return view('about-team');

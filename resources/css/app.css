@@ -4,6 +4,8 @@
 :root {
     --primary-color: #F2994A;
     --nav-height: 90px;
+
+    --container-padding: 90px;
 }
 
 ::selection {
@@ -128,6 +130,11 @@ a.primary-link {
 /* Class for creating margin for very first section. Should be filled with nav's height */
 .top-margin {
     margin-top: var(--nav-height);
+}
+
+/* Padding for container after section  */
+.container-padding {
+    padding: var(--container-padding) 0;
 }
 
 .carousel img {

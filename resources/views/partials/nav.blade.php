@@ -1,9 +1,9 @@
 <header>
-    <nav class="navbar navbar-expand-lg bg-transparent" style="height: 90px;">
+    <nav class="navbar navbar-expand-lg fixed-top" style="height: 90px;">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 @if (setting('site.logo'))
-                    {{ setting('site.logo') }}
+                    <img src="{{ Voyager::image(setting('site.logo')) }}" alt="Logo" height="60" />
                 @else
                     {{ setting('site.title') }}
                 @endif

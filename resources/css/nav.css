@@ -77,7 +77,7 @@ margin-top: 26px; */
     height: 2px;
     width: 30px;
     display: block;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-color);
 
     cursor: pointer;
     -webkit-transition: background-color .5s ease, -webkit-transform .2s ease;
@@ -504,4 +504,20 @@ body.nav-active .nav-top__list-item:nth-child(10) {
     /* visibility: visible; */
     opacity: 1;
     height: 60px;
+}
+
+
+
+/* For adding background color when screen scrolled */
+nav.navbar {
+    width: 100%;
+    position: fixed;
+    transition: 0.3s ease-in-out;
+}
+.navbar.nav-active .menu-icon__line{
+    background-color: #000000;
+}
+.nav-active {
+    background-color:#fff;
+    box-shadow: 5px -1px 12px -5px grey;
 }

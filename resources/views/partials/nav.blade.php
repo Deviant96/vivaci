@@ -8,18 +8,20 @@
                     {{ setting('site.title') }}
                 @endif
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                {{ menu('main', 'main_menu') }}
-                <div class="nav-but-wrap">
-                    <div class="menu-icon hover-target">
-                        <span class="menu-icon__line menu-icon__line-left"></span>
-                        <span class="menu-icon__line"></span>
-                        <span class="menu-icon__line menu-icon__line-right"></span>
-                    </div>
+            </button> --}}
+            <div class="navbar-collapse justify-content-end" id="navbarNav">
+                {{ menu('main', 'partials.menus.top_menu') }}
+            </div>
+            
+            {{ menu('main', 'partials.menus.main_menu') }}
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
                 </div>
             </div>
         </div>

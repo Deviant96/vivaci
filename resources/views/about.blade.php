@@ -35,7 +35,7 @@
     </section>
 
     <section>
-        <div class="container py-5 mt-5">
+        <div class="container container-padding">
             <div class="row">
                 <div class="col-6">
                     <div class="d-flex flex-column justify-content-center align-items-center">
@@ -60,7 +60,7 @@
     </section>
 
     <section>
-        <div class="container py-5">
+        <div class="container container-padding">
             <div class="row g-5">
                 @foreach ($employee as $item)
                     <div class="col-6">

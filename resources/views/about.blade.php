@@ -41,16 +41,16 @@
                     <div class="d-flex flex-column justify-content-center align-items-center">
 
                         <img src="https://source.unsplash.com/500x600/?ceo+man" alt="Founder" style="max-height: 500px; min-height: 500px;">
-                        <h3 class="text-center mt-3">Founder</h3>
-                        <p class="text-center">Kading Blabla</p>
+                        <h3 class="text-center mt-3">Founder Name</h3>
+                        <p class="text-center">The Founder</p>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex flex-column justify-content-center align-items-center">
 
                         <img src="https://source.unsplash.com/500x600/?woman" alt="Co-Founder" style="max-height: 500px; min-height: 500px;">
-                        <h3 class="text-center mt-3">Co-Founder</h3>
-                        <p class="text-center">Istrinya Kading Blabla</p>
+                        <h3 class="text-center mt-3">Co-Founder Name</h3>
+                        <p class="text-center">The Co Founder</p>
                     </div>
                 </div>
             </div>

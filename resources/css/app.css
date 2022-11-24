@@ -194,13 +194,13 @@ a.primary-link {
     display: flex;
 }
 
-.socials>a {
+.socials > a {
     transform: scale(75%);
 
     width: 64px;
     height: 64px;
     display: inline-block;
-    border: 1px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
     border-radius: 50px;
     translate: all .3s ease;
 

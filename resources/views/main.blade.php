@@ -22,9 +22,9 @@
             }
         }
 
-        .carousel-item {
+        /* .carousel-item {
             height: 600px;
-        }
+        } */
 
         .min-hw-100 {
             min-width: 100%;
@@ -49,6 +49,7 @@
             width: 100%;
             max-height: 250px;
             min-height: 250px;
+            object-fit: cover;
         }
 
         .card:hover img {
@@ -215,7 +216,7 @@
 
     {{-- Services --}}
     <section style="background-color:#E8E8E8">
-        <div class="container py-5">
+        <div class="container container-padding">
             <div class="row">
                 <div class="col">
                     <h2 class="text-uppercase fs-6 fw-bold text-black-50">How We Work</h2>
@@ -240,7 +241,7 @@
     </section>
 
     {{-- Products --}}
-    {{-- <section>
+    <section>
         <div class="container py-5">
             <div class="row">
                 <div class="col-6">
@@ -255,100 +256,50 @@
                 <div class="col-12">
 
                     <div class="row g-4">
-                        <div class="col-3">
-                            <div class="card h-100">
-                                <img src="https://images.unsplash.com/photo-1419064642531-e575728395f2?crop=entropy&fit=crop&fm=jpg&h=200&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=250"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#" class="link-primary stretched-link">View product</a>
-                                    <div class="row mt-3">
-                                        <div class="col-6">
-                                            <p class="card-text"><small class="text-muted">Product Name</small></p>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="card-text text-end"><small class="text-muted">Product Type</small>
-                                            </p>
+                        @for ($i = 0; $i < 4; $i++)
+                            <div class="col-3">
+                                <div class="card h-100">
+                                    <div class="img-container">
+                                        <img src="https://source.unsplash.com/400x400/?product+{{$i}}"
+                                        class="card-img-top min-hw-100" alt="Product #{{$i+1}}">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#" class="stretched-link">View product</a>
+                                        <div class="row mt-3">
+                                            <div class="col-6">
+                                                <p class="card-text"><small class="text-muted">Product #{{$i+1}}</small></p>
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text text-end"><small class="text-muted">Product Type</small>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card h-100">
-                                <img src="https://images.unsplash.com/photo-1419064642531-e575728395f2?crop=entropy&fit=crop&fm=jpg&h=200&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=250"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#" class="link-primary stretched-link">View product</a>
-                                    <div class="row mt-3">
-                                        <div class="col-6">
-                                            <p class="card-text"><small class="text-muted">Product Name</small></p>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="card-text text-end"><small class="text-muted">Product Type</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card h-100">
-                                <img src="https://images.unsplash.com/photo-1419064642531-e575728395f2?crop=entropy&fit=crop&fm=jpg&h=200&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=250"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#" class="link-primary stretched-link">View product</a>
-                                    <div class="row mt-3">
-                                        <div class="col-6">
-                                            <p class="card-text"><small class="text-muted">Product Name</small></p>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="card-text text-end"><small class="text-muted">Product Type</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card h-100">
-                                <img src="https://images.unsplash.com/photo-1419064642531-e575728395f2?crop=entropy&fit=crop&fm=jpg&h=200&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=250"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#" class="link-primary stretched-link">View product</a>
-                                    <div class="row mt-3">
-                                        <div class="col-6">
-                                            <p class="card-text"><small class="text-muted">Product Name</small></p>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="card-text text-end"><small class="text-muted">Product Type</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endfor
                     </div>
 
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 
     {{-- Our Team --}}
-    <section>
-        <div class="container">
-            <div class="row py-5">
+    <section class="overflow-hidden">
+        <div class="container container-padding">
+            <div class="row">
                 <div class="col-6 d-flex flex-column justify-content-center">
                     <div>
-                        <h2 class="font-big-two">Our Team</h2>
-                        <p>Trusted Design Team</p>
-                        <p>Our hands-on approach to design ensures that our team utilizes their skills and creative vision
+                        <h2 class="text-uppercase fs-6 fw-bold text-black-50">Our Team</h2>
+                        <p class="font-big-two fw-bold">Trusted Design Team</p>
+                        <p class="mb-5">Our hands-on approach to design ensures that our team utilizes their skills and creative vision
                             to produce memorable, unique, and timeless designs for our clients.</p>
-                        <a href="..." class="btn btn-secondary">Meet Our Team</a>
+                        <a href="..." class="primary-link">Meet Our Team</a>
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="position-relative" style="height: 800px">
+                    <div class="position-relative" style="height: 600px">
                             <img src="{{ url('img/team.bmp') }}"
                         alt="" class="position-absolute" style="max-width: 1000px; top:50%;transform:translateY(-50%)" />
                     </div>

@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+@php($imageZoom = true)
+
 @section('content')
     <section>
 
@@ -39,7 +41,7 @@
                         @else
                             @foreach ($em as $e)
                                 <div class="col-4">
-                                    <div style="height: 240px">
+                                    <div class="img-container" style="max-height: 600px;">
                                         <img class="h-100 w-100" src="{{ Voyager::image($e->photo) }}" />
                                     </div>
                                     <h3 class="mt-3">{{ $e->name }}</h3>

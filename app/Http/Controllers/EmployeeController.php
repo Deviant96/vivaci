@@ -20,7 +20,7 @@ class EmployeeController extends Controller
 		// $employee = Employee::where('team', 'design'); // ->where('status', 'active');
 		// $employee = $employee->firstOrFail();
 		$details = Team::where('slug', $team)->firstOrFail();
-        $employee = Employee::where('team', $team)->get();
+        $employee = Employee::where('team', $team)->orderBy('order', 'asc')->get();
 
 		// return view($page->template)->with('page', $page);
         // $project = Project::where('slug', $team); // ->where('status', 'active');

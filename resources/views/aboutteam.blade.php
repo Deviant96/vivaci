@@ -33,7 +33,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div class="row g-5">
+                    <div class="row g-5 d-flex justify-content-center">
                         @if (count($em) < 1)
                             <div class="vh-100 d-flex justify-content-center align-items-center">
                                 <h2 class="font-big-two">No members yet in this team</h2>

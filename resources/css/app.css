@@ -221,5 +221,5 @@ a.primary-link {
 .socials>a>svg {
     max-width: 32px;
     max-height: 32px;
-    translate: all .3s ease;
+    transition: all .3s ease;
 }

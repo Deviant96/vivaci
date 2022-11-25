@@ -36,12 +36,16 @@
             animation: zoom 20s;
         }
 
-        .home-about {
+        /* section {
             background: rgb(196, 196, 196);
             background: -moz-linear-gradient(240deg, rgba(196, 196, 196, 1) 25%, rgba(255, 255, 255, 1) 100%);
             background: -webkit-linear-gradient(240deg, rgba(196, 196, 196, 1) 25%, rgba(255, 255, 255, 1) 100%);
             background: linear-gradient(240deg, rgba(196, 196, 196, 1) 25%, rgba(255, 255, 255, 1) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c4c4c4", endColorstr="#ffffff", GradientType=1);
+        } */
+
+        section {
+            background: #ebebeb;
         }
 
         .card-img,
@@ -167,7 +171,7 @@
 
     {{-- Projects --}}
     <section>
-        <div class="container py-5">
+        {{-- <div class="container py-5">
             <div class="row">
                 <div class="col-6">
                     <h2 class="text-uppercase fs-6 fw-bold text-black-50">Projects</h2>
@@ -184,9 +188,7 @@
                 <div class="col-12">
 
                     <div class="row g-4">
-                        {{-- {{ $projects }}  --}}
                         @foreach ($projects as $item)
-                            {{-- {{$item}} --}}
                             @php($project_url = '/projects/' . $item->category->slug . '/' . $item->slug)
                             <div class="col-4">
                                 <div class="card h-100">
@@ -216,6 +218,76 @@
                     </div>
                 </div>
             </div>
+        </div> --}}
+
+        <div class="container container-padding">
+            <div>
+                <div class="row">
+                    <div class="col-6">
+                        <h2 class="text-uppercase fs-6 fw-bold text-black-50">Projects</h2>
+                        <h3 class="fw-bold font-big-one">Awesome things we’ve done</h3>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end align-items-end">
+                        @foreach ($categories as $item)
+                            <a href="{{ url(route('projects', ['slug' => $item->slug])) }}"
+                                class="primary-link ms-4 d-inline-block">{{ $item->title }}</a>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    @for ($i = 0; $i < count($projects); $i++)
+                        @php($item = $projects[$i])
+                        @php($project_url = '/projects/' . $item->category->slug . '/' . $item->slug)
+                        {{-- {{ $projects[$i] }} --}}
+                        
+                        @if ($i == 0)
+                            <div class="col-6">
+                                <div class="viva-card">
+                                    <div class="viva-card__image" style="background-image:url({{ Voyager::image($item->image) }});height:840px;"></div>  
+                                    <div class="viva-card__text">
+                                        <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
+                                        <h3>{{ $item->title }}</h3>
+                                    </div> 
+                                    <a href="{{ $project_url }}" class="viva-card__link"></a>
+                                </div>
+                            </div>
+                        @endif
+                        @if ($i == 1)
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="viva-card">
+                                            <div class="viva-card__image" style="background-image:url({{ Voyager::image($item->image) }});height:400px;"></div>  
+                                            <div class="viva-card__text">
+                                                <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
+                                                <h3>{{ $item->title }}</h3>
+                                            </div> 
+                                            <a href="{{ $project_url }}" class="viva-card__link"></a>
+                                        </div>
+                                    </div>
+                        @endif
+                        @if ($i == 2)
+                                    <div class="col-12" style="margin-top: 40px">
+                                        <div class="viva-card">
+                                            <div class="viva-card__image" style="background-image:url({{ Voyager::image($item->image) }});height:400px;"></div>  
+                                            <div class="viva-card__text">
+                                                <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
+                                                <h3>{{ $item->title }}</h3>
+                                            </div> 
+                                            <a href="{{ $project_url }}" class="viva-card__link"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endfor
+                    
+                    
+                            
+                    
+                </div>
+            </div>
+        </div>
     </section>
 
     {{-- Services --}}

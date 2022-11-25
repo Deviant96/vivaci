@@ -65,8 +65,10 @@
                 @foreach ($employee as $item)
                     <div class="col-6">
                         <div class="d-flex flex-column justify-content-center align-content-center">
-                            <img src="{{ Voyager::image($item->image) }}" alt="Design Team"
-                                style="min-height: 400px;max-height:400px;">
+                            <div class="img-container">
+                                <img src="{{ Voyager::image($item->image) }}" alt="Design Team"
+                                style="width:100%;min-height: 400px;max-height:400px;object-fit:cover;">
+                            </div>
                             <h3 class="text-center mt-3">{{ $item->name }} Team</h3>
                             <p class="text-center">{!! $item->description !!}</p>
                             <div class="text-center"><a class="primary-link" href="{{ url()->current() . "/" . $item->slug }}">View members</a></div>

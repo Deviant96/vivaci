@@ -23,8 +23,8 @@
         }
 
         /* .carousel-item {
-            height: 600px;
-        } */
+                height: 600px;
+            } */
 
         .min-hw-100 {
             min-width: 100%;
@@ -157,7 +157,7 @@
                                 reality. Whether you're looking to make over an existing space or build from scratch, we can
                                 take care of every step of the process—allowing you to focus on what matters most: living
                                 well in your space.</p>
-                            <a href="..." class="primary-link">About Us</a>
+                            <a href="{{ route('about') }}" class="primary-link">About Us</a>
                         </div>
                     </div>
                 </div>
@@ -174,7 +174,10 @@
                     <div class="fs-4 fw-bold">Awesome things we’ve done</div>
                 </div>
                 <div class="col-6 d-flex justify-content-end align-items-end">
-                    <a href="..." class="link-primary">View all projects</a>
+                    @foreach ($categories as $item)
+                        <a href="{{ url(route('projects', ['slug' => $item->slug])) }}"
+                            class="primary-link ms-4 d-inline-block">{{ $item->title }}</a>
+                    @endforeach
                 </div>
             </div>
             <div class="row mt-5">
@@ -184,6 +187,7 @@
                         {{-- {{ $projects }}  --}}
                         @foreach ($projects as $item)
                             {{-- {{$item}} --}}
+                            @php($project_url = '/projects/' . $item->category->slug . '/' . $item->slug)
                             <div class="col-4">
                                 <div class="card h-100">
                                     <div class="img-container">
@@ -204,7 +208,7 @@
                                         </div>
                                         <h3 class="mt-4 text-uppercase">{{ $item->title }}</h3>
                                         <p class="mb-5 text-black-50">{{ $item->description }}</p>
-                                        <a href="{!! '/project/' . $item->slug !!}" class="stretched-link">View project</a>
+                                        <a href="{!! $project_url !!}" class="stretched-link">View project</a>
                                     </div>
                                 </div>
                             </div>
@@ -234,7 +238,7 @@
                     <p class="my-5"><strong class="fw-bold">Vivaci Living</strong> is full services Interior Design
                         firm, providing a high quality product and services for commercial ans residential interiors. We
                         work as a super team to deliver our best services before, during and after construction.</p>
-                    <a href="..." class=" btn btn-primary">Our Services</a>
+                    <a href="{{ route('services') }}" class=" btn btn-primary">Our Services</a>
                 </div>
             </div>
         </div>
@@ -260,17 +264,19 @@
                             <div class="col-3">
                                 <div class="card h-100">
                                     <div class="img-container">
-                                        <img src="https://source.unsplash.com/400x400/?product+{{$i}}"
-                                        class="card-img-top min-hw-100" alt="Product #{{$i+1}}">
+                                        <img src="https://source.unsplash.com/400x400/?product+{{ $i }}"
+                                            class="card-img-top min-hw-100" alt="Product #{{ $i + 1 }}">
                                     </div>
                                     <div class="card-body">
                                         <a href="#" class="stretched-link">View product</a>
                                         <div class="row mt-3">
                                             <div class="col-6">
-                                                <p class="card-text"><small class="text-muted">Product #{{$i+1}}</small></p>
+                                                <p class="card-text"><small class="text-muted">Product
+                                                        #{{ $i + 1 }}</small></p>
                                             </div>
                                             <div class="col-6">
-                                                <p class="card-text text-end"><small class="text-muted">Product Type</small>
+                                                <p class="card-text text-end"><small class="text-muted">Product
+                                                        Type</small>
                                                 </p>
                                             </div>
                                         </div>
@@ -293,19 +299,56 @@
                     <div>
                         <h2 class="text-uppercase fs-6 fw-bold text-black-50">Our Team</h2>
                         <p class="font-big-two fw-bold">Trusted Design Team</p>
-                        <p class="mb-5">Our hands-on approach to design ensures that our team utilizes their skills and creative vision
+                        <p class="mb-5">Our hands-on approach to design ensures that our team utilizes their skills and
+                            creative vision
                             to produce memorable, unique, and timeless designs for our clients.</p>
-                        <a href="..." class="primary-link">Meet Our Team</a>
+                        <div class="row gy-4">
+                            @foreach ($teams as $item)
+                                <div class="col-6">
+                                    <a href="{{$item->slug}}" class="primary-link">{{$item->name}} team</a>
+                                </div>
+                            @endforeach
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="position-relative" style="height: 600px">
-                            <img src="{{ url('img/team.bmp') }}"
-                        alt="" class="position-absolute" style="max-width: 1000px; top:50%;transform:translateY(-50%)" />
+                        <img src="{{ url('img/team.bmp') }}" alt="" class="position-absolute"
+                            style="max-width: 1000px; top:50%;transform:translateY(-50%)" />
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    {{-- Instagram --}}
+    <section style="background-color: #000000">
+        <div class="container container-padding">
+            <div class="row">
+                <div class="col">
+                    <h2>Find us on Instagram <a href="{{ url('https://www.instagram.com/vivaciliving/') }}" target="_blank">@vivaciliving</a></h2>
+                    <!-- Place <div> tag where you want the feed to appear -->
+                        <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank"
+                            class="crt-logo crt-tag">Powered by Curator.io</a></div>
+                    <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+                    <script type="text/javascript">
+                        /* curator-feed-default-feed-layout */
+                        (function() {
+                            var i, e, d = document,
+                                s = "script";
+                            i = d.createElement("script");
+                            i.async = 1;
+                            i.charset = "UTF-8";
+                            i.src = "https://cdn.curator.io/published/0a4b0477-9c10-41a9-be6a-bb34d5911b12.js";
+                            e = d.getElementsByTagName(s)[0];
+                            e.parentNode.insertBefore(i, e);
+                        })();
+                    </script>
+                </div>
+            </div>
+        </div>
+        
     </section>
 
     {{-- CTA --}}
@@ -318,9 +361,10 @@
                             <div class="w-50 py-5">
                                 <h2>Have an idea in your mind?
                                     Let’s discuss with us!</h2>
-                                <p class="mt-2">The Vivaci Living Design Team continues to work closely with our clients to create
+                                <p class="mt-2">The Vivaci Living Design Team continues to work closely with our clients
+                                    to create
                                     one-of-a-kind design solutions tailored specifically to each client.</p>
-                                <a href="..." class="btn btn-primary mt-4">Connect With Us</a>
+                                <a href="{{ route('contact') }}" class="btn btn-primary mt-4">Connect With Us</a>
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,7 @@ Route::get('/', 'App\Http\Controllers\HomeController@index');
 //     return view('projects');
 // });
 // Route::get('/projects/{slug}', 'App\Http\Controllers\ProjectsController@getProjectType')->where('slug', '([A-Za-z0-9\-\/]+)');
-Route::get('/projects/{slug}/{title?}', 'App\Http\Controllers\ProjectsController@getProjectType'); //->where('slug', '([A-Za-z0-9\-\/]+)');
+Route::get('/projects/{slug}/{title?}', 'App\Http\Controllers\ProjectsController@getProjectType')->name('projects');//->where('slug', '([A-Za-z0-9\-\/]+)');
 
 // Route::controller(ProjectsController::class)->group(function () {
 //     Route::get('/projects/{slug}', 'getProjectType')->where('slug', '([A-Za-z0-9\-\/]+)');
@@ -33,7 +33,7 @@ Route::get('/projects/{slug}/{title?}', 'App\Http\Controllers\ProjectsController
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 
 // Route::get('/about', function () {
 //     // return view('about');
@@ -42,11 +42,11 @@ Route::get('/contact', function () {
 
 Route::get('/services', function () {
     return view('services');
-});
+})->name('services');
 
 Route::controller(EmployeeController::class)->group(function () {
-    Route::get('/about', 'index');
-    Route::get('/about/{team}', 'getEmployee')->where('title', '([A-Za-z0-9\-\/]+)');
+    Route::get('/about', 'index')->name('about');
+    Route::get('/about/{team}', 'getEmployee')->where('title', '([A-Za-z0-9\-\/]+)')->name('about.team');
 });
 
 // Route::get('/about-team', function () {

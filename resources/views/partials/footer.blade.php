@@ -14,7 +14,7 @@
                     {{ menu('main', 'partials.menus.footer_menu') }}
                 </div>
                 <div class="mt-3">
-                    <a href="..." class="btn btn-primary">Connect With Us</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary mt-2">Connect With Us</a>
                 </div>
             </div>
         </div>

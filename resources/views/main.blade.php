@@ -63,6 +63,11 @@
         .link-primary {
             color: var(--primary-color);
         }
+
+        .navbar:not(.nav-active) { /* Give navbar light background at the top because the banner is dark */
+            background-color: #fff;
+            box-shadow: 5px -1px 12px -5px grey;
+        }
     </style>
 @endsection
 
@@ -399,7 +404,7 @@
         <div class="container container-padding">
             <div class="row">
                 <div class="col">
-                    <h2>Find us on Instagram <a href="{{ url('https://www.instagram.com/vivaciliving/') }}" target="_blank">@vivaciliving</a></h2>
+                    <h2 class="text-light mb-3"><span class="font-big-one">Find us</span> on Instagram <a href="{{ url('https://www.instagram.com/vivaciliving/') }}" target="_blank">@vivaciliving</a></h2>
                     <!-- Place <div> tag where you want the feed to appear -->
                         <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank"
                             class="crt-logo crt-tag">Powered by Curator.io</a></div>

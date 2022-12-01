@@ -237,16 +237,17 @@
                 <div class="row mt-5">
                     @for ($i = 0; $i < count($projects); $i++)
                         @php($item = $projects[$i])
+                        @php($image = str_replace(" ","%20",$item->image) ) {{-- Handle filename that contain whitespace so it's encoded --}}
                         @php($project_url = '/projects/' . $item->category->slug . '/' . $item->slug)
                         {{-- {{ $projects[$i] }} --}}
                         
                         @if ($i == 0)
                             <div class="col-6">
                                 <div class="viva-card">
-                                    <div class="viva-card__image" style="background-image:url({!! Voyager::image($item->image) !!});height:840px;"></div>  
+                                    <div class="viva-card__image" style="background-image:url({{ Voyager::image( $image ) }});height:840px;"></div>  
                                     <div class="viva-card__text">
                                         <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
-                                        <h3>{{ $item->title }}</h3>
+                                        <h3>{{ $item->title }}Tes</h3>
                                     </div> 
                                     <a href="{{ $project_url }}" class="viva-card__link"></a>
                                 </div>
@@ -257,7 +258,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="viva-card">
-                                            <div class="viva-card__image" style="background-image:url({!! Voyager::image($item->image) !!});height:400px;"></div>  
+                                            <div class="viva-card__image" style="background-image:url({{ Voyager::image( $image ) }});height:400px;"></div>  
                                             <div class="viva-card__text">
                                                 <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
                                                 <h3>{{ $item->title }}</h3>
@@ -269,7 +270,7 @@
                         @if ($i == 2)
                                     <div class="col-12" style="margin-top: 40px">
                                         <div class="viva-card">
-                                            <div class="viva-card__image" style="background-image:url({!! Voyager::image($item->image) !!});height:400px;"></div>  
+                                            <div class="viva-card__image" style="background-image:url({{ Voyager::image( $image ) }});height:400px;"></div>  
                                             <div class="viva-card__text">
                                                 <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
                                                 <h3>{{ $item->title }}</h3>

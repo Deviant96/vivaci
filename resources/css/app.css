@@ -74,15 +74,7 @@ a:hover {
     transition: all .3s ease;
 }
 
-a.primary-link {
-    /* display: block; */
-    padding: 3px;
-    position: relative;
 
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--primary-color);
-}
 
 /* Zoom Image on Hover */
 .img-container {
@@ -101,16 +93,26 @@ a.primary-link {
 }
 
 
-.primary-link::after {
+a.primary-link {
+    /* display: block; */
+    padding: 3px;
+    position: relative;
+
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.primary-link::after,
+.primary-link::before {
     content: " ";
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
-    border-bottom: 3px solid var(--primary-color);
-    width: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    width: 0;
     transition: all .4s ease-in-out;
+    transform: translateX(-50%);
 }
-
 .primary-link:hover::after {
     width: 100%;
 }

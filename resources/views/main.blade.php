@@ -327,7 +327,7 @@
             <div class="row">
                 <div class="col-6">
                     <h2 class="text-uppercase fs-6 fw-bold text-black-50">Products</h2>
-                    <div class="fs-4 fw-bold">Products for your home</div>
+                    <div class="fs-4 fw-bold">Product for your home</div>
                 </div>
                 <div class="col-6 d-flex justify-content-end align-items-end">
                     <a href="..." class="link-primary">View all products</a>

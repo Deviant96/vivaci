@@ -74,6 +74,10 @@ p {
     font-family: 'Inter', sans-serif;
 }
 
+ul, li {
+    padding: 0;
+}
+
 .font-big-one {
     font-size: 4rem;
     /* 64px */

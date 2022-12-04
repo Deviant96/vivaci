@@ -92,14 +92,14 @@
 
                 <div class="carousel-item active" data-bs-interval="4000">
                     <img src="https://source.unsplash.com/1920x1080/?interior" class="d-block min-hw-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption">
                         <h5>The Art of Designing Your Home</h5>
                         <p>The most beautiful homes are built with love.</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="4000">
                     <img src="https://source.unsplash.com/1920x1080/?3d" class="d-block min-hw-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption ">
                         <h5>Making Your Space Shine</h5>
                         <p>We're here to help you create the home of your dreams.</p>
                     </div>
@@ -107,7 +107,7 @@
                 <div class="carousel-item" data-bs-interval="4000">
                     <img src="https://source.unsplash.com/1920x1080/?interior+design" class="d-block min-hw-100"
                         alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption ">
                         <h5>The Best Interior Design Service in Indonesia</h5>
                         <p>Designing your home is our passion.</p>
                     </div>
@@ -136,30 +136,30 @@
 
     {{-- About --}}
     <section class="home-about">
-        <div class="container py-5">
+        <div class="container container-padding">
             <div class="row">
                 <div class="col-12">
-                    <div class="text-center d-flex flex-column align-items-center py-3">
+                    <div class="text-sm-center d-flex flex-column align-items-sm-center py-3">
                         <h2>About Us</h2>
-                        <p class="w-50">Whether you're looking for a modern update or something more traditional, we've
+                        <p>Whether you're looking for a modern update or something more traditional, we've
                             got the expertise and creative vision to help bring your vision to life.</p>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center gap-5">
-                <div class="col-6 d-flex justify-content-end position-relative" style="height: 500px;width: 500px;">
-                    <div class="home-about-image-top img-container rounded-4"
+            <div class="row justify-content-sm-center gap-5">
+                <div class="col-12 col-sm-6 d-flex justify-content-end position-relative" style="height: 500px;width: 500px;">
+                    <div class="home-about-image-top img-container rounded-4 img-shadow"
                         style="position: absolute;bottom: 0;right: 0;z-index: 41;">
                         <img src="{{ asset('/img/home-about-1.jpg') }}" width="300" height="300" alt="" />
                     </div>
-                    <div class="home-about-image-below img-container rounded-4"
+                    <div class="home-about-image-below img-container rounded-4 img-shadow"
                         style="position: absolute;top: 0;left: 0;z-index: 40;">
                         <img src="{{ asset('/img/home-about-2.jpg') }}" width="300" height="300" alt="" />
                     </div>
                 </div>
-                <div class="col-6 d-flex">
-                    <div class=" d-flex justify-content-center flex-column">
-                        <div class="pe-5">
+                <div class="col-12 col-sm-6 d-flex">
+                    <div class="d-flex justify-content-sm-center flex-column">
+                        <div class="pe-sm-5">
                             <h3 class="display-5 fw-bold">Brighten Up Your Living</h3>
                             <p class="fs-5 text-black-50">Innovate Your Home</p>
                             <p class="mb-5">Our team of interior designers is here to help you make your dream home a
@@ -227,17 +227,13 @@
 
         <div class="container container-padding">
             <div>
+
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12">
                         <h2 class="text-uppercase fs-6 fw-bold text-black-50">Projects</h2>
                         <h3 class="fw-bold font-big-one">Awesome things we’ve done</h3>
                     </div>
-                    <div class="col-6 d-flex justify-content-end align-items-end">
-                        @foreach ($categories as $item)
-                            <a href="{{ url(route('projects', ['slug' => $item->slug])) }}"
-                                class="primary-link ms-4 d-inline-block">{{ $item->title }}</a>
-                        @endforeach
-                    </div>
+                    
                 </div>
                 <div class="row mt-5">
                     @for ($i = 0; $i < count($projects); $i++)
@@ -246,9 +242,9 @@
                         {{-- {{ $projects[$i] }} --}}
                         
                         @if ($i == 0)
-                            <div class="col-6">
-                                <div class="viva-card">
-                                    <div class="viva-card__image" style="background-image:url({{ Voyager::image( $item->image ) }});height:840px;"></div>  
+                            <div class="col-12 col-sm-6">
+                                <div class="viva-card img-shadow">
+                                    <div class="viva-card__image first" style="background-image:url({{ Voyager::image( $item->image ) }});"></div>  
                                     <div class="viva-card__text">
                                         <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
                                         <h3>{{ $item->title }}Tes</h3>
@@ -258,11 +254,11 @@
                             </div>
                         @endif
                         @if ($i == 1)
-                            <div class="col-6">
+                            <div class="col-12 col-sm-6 home-projects-second-image-container">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="viva-card">
-                                            <div class="viva-card__image" style="background-image:url({{ Voyager::image( $item->image ) }});height:400px;"></div>  
+                                        <div class="viva-card img-shadow">
+                                            <div class="viva-card__image second" style="background-image:url({{ Voyager::image( $item->image ) }});"></div>  
                                             <div class="viva-card__text">
                                                 <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
                                                 <h3>{{ $item->title }}</h3>
@@ -273,8 +269,8 @@
                         @endif
                         @if ($i == 2)
                                     <div class="col-12" style="margin-top: 40px">
-                                        <div class="viva-card">
-                                            <div class="viva-card__image" style="background-image:url({{ Voyager::image( $item->image ) }});height:400px;"></div>  
+                                        <div class="viva-card img-shadow">
+                                            <div class="viva-card__image third" style="background-image:url({{ Voyager::image( $item->image ) }});"></div>  
                                             <div class="viva-card__text">
                                                 <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
                                                 <h3>{{ $item->title }}</h3>
@@ -290,6 +286,18 @@
                     
                             
                     
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                        <p>Checkout more of our projects</p>
+                        <div>
+                            @foreach ($categories as $item)
+                            <a href="{{ url(route('projects', ['slug' => $item->slug])) }}"
+                                class="primary-link mx-2 d-inline-block">{{ $item->title }}</a>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -321,6 +329,52 @@
         </div>
     </section>
 
+    {{-- Why Us --}}
+    <section>
+        <div class="container container-padding">
+            <div class="row">
+                <div class="col">
+                    <div class="text-sm-center">
+                        <p class="text-muted text-uppercase">Every Space Count</p>
+                        <h2 class="font-big-one">Why Choose Us</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 g-3 g-sm-5">
+                <div class="col-12 col-sm-4">
+                    <i class="bi bi-calendar-check-fill font-big-two color-primary"></i>
+                    <h3 class="mt-3">Building Planning</h3>
+                    <p class="text-gray-500">Our team of experts will work with you to design a space that fits your needs. We'll help you find the right location, and we'll handle all the red tape so you don't have to think about it.sp</p>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <i class="bi bi-box font-big-two color-primary"></i>
+                    <h3 class="mt-3">Interior Space</h3>
+                    <p class="text-gray-500">We understand that your space is a reflection of your business, and we want to help you create the perfect environment for your needs.</p>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <i class="bi bi-building-fill font-big-two color-primary"></i>
+                    <h3 class="mt-3">Small Offices</h3>
+                    <p class="text-gray-500">We believe in the value of detail—the small things matter, and when they're done right, they can make a huge difference.</p>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <i class="bi bi-rulers font-big-two color-primary"></i>
+                    <h3 class="mt-3">Reinovating Space</h3>
+                    <p class="text-gray-500">We make sure that every project is unique and there is no cookie-cutter approach to our work. We love what we do, and it shows in our work.</p>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <i class="bi bi-house-door-fill font-big-two color-primary"></i>
+                    <h3 class="mt-3">Real Estates</h3>
+                    <p class="text-gray-500">We specialize in providing affordable luxury for all kinds of homes: from humble apartments to mansions with acres of land.</p>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <i class="bi bi-briefcase-fill font-big-two color-primary"></i>
+                    <h3 class="mt-3">Free Consultation</h3>
+                    <p class="text-gray-500">We offer free consultations to make sure that we're able to meet your needs and make sure that you have the best experience possible when working with us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- Products --}}
     <section>
         <div class="container py-5">
@@ -338,7 +392,7 @@
 
                     <div class="row g-4">
                         @for ($i = 0; $i < 4; $i++)
-                            <div class="col-3">
+                            <div class="col-12 col-sm-3">
                                 <div class="card h-100">
                                     <div class="img-container">
                                         <img src="https://source.unsplash.com/400x400/?product+{{ $i }}"
@@ -372,7 +426,7 @@
     <section class="overflow-hidden">
         <div class="container container-padding">
             <div class="row">
-                <div class="col-6 d-flex flex-column justify-content-center">
+                <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">
                     <div>
                         <h2 class="text-uppercase fs-6 fw-bold text-black-50">Our Team</h2>
                         <p class="font-big-two fw-bold">Trusted Design Team</p>
@@ -389,10 +443,9 @@
                         
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="position-relative" style="height: 600px">
-                        <img src="{{ url('img/team.bmp') }}" alt="" class="position-absolute"
-                            style="max-width: 1000px; top:50%;transform:translateY(-50%)" />
+                <div class="col-12 col-sm-6 mt-5 mt-sm-0">
+                    <div class="position-relative home-ourteam-image-container">
+                        <img src="{{ url('img/team.bmp') }}" alt="" class="position-sm-absolute img-shadow home-ourteam-image" />
                     </div>
                 </div>
             </div>
@@ -404,7 +457,7 @@
         <div class="container container-padding">
             <div class="row">
                 <div class="col">
-                    <h2 class="text-light mb-3"><span class="font-big-one">Find us</span> on Instagram <a href="{{ url('https://www.instagram.com/vivaciliving/') }}" target="_blank">@vivaciliving</a></h2>
+                    <h2 class="text-light mb-3">Find us on Instagram <a href="{{ url('https://www.instagram.com/vivaciliving/') }}" target="_blank">@vivaciliving</a></h2>
                     <!-- Place <div> tag where you want the feed to appear -->
                         <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank"
                             class="crt-logo crt-tag">Powered by Curator.io</a></div>
@@ -434,8 +487,8 @@
             <div class="row">
                 <div class="col">
                     <div style="background-color:#E8E8E8">
-                        <div class="py-5 text-center d-flex flex-column gap-3 justify-content-center align-items-center">
-                            <div class="w-50 py-5">
+                        <div class="py-5 text-sm-center d-flex flex-column gap-3 justify-content-center align-items-center">
+                            <div class="py-5">
                                 <h2>Have an idea in your mind?
                                     Let’s discuss with us!</h2>
                                 <p class="mt-2">The Vivaci Living Design Team continues to work closely with our clients

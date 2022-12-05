@@ -4,9 +4,39 @@
 <style>
     .card .card-img-top {
         object-fit: cover;
-        max-height: 400px;
-        min-height: 400px;
     }
+
+    .member-img-container {
+        max-height: 350px;
+    }
+    .member-img {
+        width: 100%;
+    }
+    @media (min-width:1200px) {
+        .card .card-img-top {
+            max-height: 350px;
+        }
+    }
+    @media (max-width:1200px) {
+        .card .card-img-top {
+            max-height: 215px;
+        }
+    }
+    /* @media (max-width:992px) {
+        .member-img-container {
+            max-height: 350px;
+        }
+    }
+    @media (max-width:768px) {
+        .member-img-container {
+            max-height: 247px;
+        }
+    }
+    @media (max-width:576px) {
+        .member-img-container {
+            max-height: 350px;
+        }
+    } */
 </style>
 @endsection
 
@@ -23,20 +53,20 @@
     </section>
 
     <section>
-        <div class="container mt-5 py-5">
+        <div class="container mt-0 mt-sm-5 py-5">
 
             <div class="row g-5">
 
                 @foreach ($category as $project)
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6">
                         <div class="card h-100">
                             <img src="{{ Voyager::image($project->image) }}" class="card-img-top" alt="">
 
                             <div class="card-body">
-                                <h5 class="card-title">{{ $project->title }}</h5>
+                                <h3 class="card-title">{{ $project->title }}</h3>
                                 <p class="card-text">{!! $project->desc !!}</p>
 
-                                <a href="{{ url()->current() }}/{{ $project->slug }}" class="btn btn-primary btn-sm">View</a>
+                                <a href="{{ url()->current() }}/{{ $project->slug }}" class="stretched-link">View</a>
                             </div>
 
                         </div>

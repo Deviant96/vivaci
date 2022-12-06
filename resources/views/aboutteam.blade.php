@@ -82,7 +82,7 @@
                         @else
                             @foreach ($em as $e)
                                 <div class="col-6 col-sm-4">
-                                    <div class="img-container member-img-container">
+                                    <div class="img-container member-img-container img-shadow">
                                         <img class="member-img" src="{{ Voyager::image($e->photo) }}" />
                                     </div>
                                     <h3 class="mt-3">{{ $e->name }}</h3>

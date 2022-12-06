@@ -243,7 +243,15 @@ a.primary-link {
 }
 
 .img-shadow {
-    box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.6);
+    /* box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.6); */
+
+    box-shadow: 15px 15px 30px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+.img-shadow:hover {
+    box-shadow: 15px 15px 40px 4px rgba(0, 0, 0, 0.2);
 }
 
 .socials {
@@ -323,7 +331,7 @@ a.primary-link {
     display: block;
 }
 
-/* Very specific element styling */
+/* VERY SPECIFIC ELEMENT STYLING */
 
 .home-ourteam-image {
     width: 100%;

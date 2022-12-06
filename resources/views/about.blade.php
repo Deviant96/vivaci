@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="img-container w-100 text-center">
+                        <div class="img-container img-shadow w-100 text-center">
                             <img src="{{ asset('/img/teams/founder.jpg') }}" alt="Founder" class="founder-img">
                         </div>
                         <h3 class="text-center mt-3 team-title">Andrew Thomas Kading</h3>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-6">
                     <div class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="img-container w-100">
+                        <div class="img-container img-shadow w-100 text-center">
                             <img src="{{ asset('/img/teams/cofounder.jpg') }}" alt="Founder" class="founder-img">
                         </div>
                         <h3 class="text-center mt-3 team-title">Lia Yuliana</h3>
@@ -92,7 +92,7 @@
                 @foreach ($employee as $item)
                     <div class="col-6">
                         <div class="d-flex flex-column justify-content-center align-content-center">
-                            <div class="img-container">
+                            <div class="img-container img-shadow">
                                 <img src="{{ Voyager::image($item->image) }}" alt="Design Team"
                                     class="founder-img team-img">
                             </div>

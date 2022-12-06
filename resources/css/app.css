@@ -110,6 +110,12 @@ a:hover {
     }    
 }
 
+.main {
+    position: relative;
+    z-index: 3;
+    background: white;
+}
+
 /* Zoom Image on Hover */
 .img-container {
     overflow: hidden;
@@ -177,6 +183,17 @@ a.primary-link {
         padding-top: var(--container-padding-mobile);
         padding-bottom: var(--container-padding-mobile);
     }
+}
+
+.footer{
+    background-color: rgb(230,230,230);
+    color: #555555;
+}
+/* Shadow for top footer */
+.top-shadow {
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
 }
 
 .carousel img {
@@ -264,7 +281,7 @@ a.primary-link {
     width: 64px;
     height: 64px;
     display: inline-block;
-    border: 2px solid #FFFFFF;
+    border: 2px solid #555555;
     border-radius: 50px;
     translate: all .3s ease;
 

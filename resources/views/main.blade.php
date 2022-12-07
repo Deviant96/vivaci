@@ -91,25 +91,25 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active" data-bs-interval="4000">
-                    <img src="https://source.unsplash.com/1920x1080/?interior" class="d-block min-hw-100" alt="...">
+                    <img src="{{ url('storage/'.setting('banner.banner_one')) }}" class="d-block min-hw-100" alt="...">
                     <div class="carousel-caption">
-                        <h5>The Art of Designing Your Home</h5>
-                        <p>The most beautiful homes are built with love.</p>
+                        <h5>{{ setting('banner.banner_one_title') }}</h5>
+                        <p>{{ setting('banner.banner_one_description') }}</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="4000">
-                    <img src="https://source.unsplash.com/1920x1080/?3d" class="d-block min-hw-100" alt="...">
+                    <img src="{{ url('storage/'.setting('banner.banner_two')) }}" class="d-block min-hw-100" alt="...">
                     <div class="carousel-caption ">
-                        <h5>Making Your Space Shine</h5>
-                        <p>We're here to help you create the home of your dreams.</p>
+                        <h5>{{ setting('banner.banner_two_title') }}</h5>
+                        <p>{{ setting('banner.banner_two_description') }}</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="4000">
-                    <img src="https://source.unsplash.com/1920x1080/?interior+design" class="d-block min-hw-100"
+                    <img src="{{ url('storage/'.setting('banner.banner_three')) }}" class="d-block min-hw-100"
                         alt="...">
                     <div class="carousel-caption ">
-                        <h5>The Best Interior Design Service in Indonesia</h5>
-                        <p>Designing your home is our passion.</p>
+                        <h5>{{ setting('banner.banner_three_title') }}</h5>
+                        <p>{{ setting('banner.banner_three_description') }}</p>
                     </div>
                 </div>
 

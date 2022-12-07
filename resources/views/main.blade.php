@@ -175,7 +175,7 @@
     </section>
 
     {{-- Projects --}}
-    <section>
+    <section style="background: #f5f5f5;">
         {{-- <div class="container py-5">
             <div class="row">
                 <div class="col-6">
@@ -425,7 +425,7 @@
     </section> --}}
 
     {{-- Our Team --}}
-    <section class="overflow-hidden">
+    <section class="overflow-hidden" style="background: #f5f5f5;">
         <div class="container container-padding">
             <div class="row">
                 <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">

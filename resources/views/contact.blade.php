@@ -2,18 +2,42 @@
 
 @section('style')
     <style>
-        /* @media (min-width: 576px) {
-                .title {
-                    margin-top:200px;
-                }
-            } */
+        /* We make it white color because banner has dark background */
+        .navbar:not(.nav-active) .navbar-nav>.nav-item>.nav-link {
+            color: #ffffff;
+        }
 
+        .banner-img-container {
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @media (max-width:576px) {
+            .banner-img-container {
+                height: 300px;
+                background-position: bottom;
+            }
+        }
+
+        .banner-img {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+        .banner-img > img {
+            min-height: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
 
         @media (min-width: 576px) {
             .form-content-container {
-                background-color: #E8E8E8;
+                background-color: #F5F5F5;
                 border-radius: 15px;
-                box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1);
             }
 
             .form-content {
@@ -42,6 +66,10 @@
             border-color: black;
         }
 
+        .form-control:focus {
+            background-color: transparent;
+        }
+
         .form-control.valid {
             border-color: green;
         }
@@ -64,32 +92,57 @@
             transition: opacity .4s ease-out;
         }
 
-        @media (min-width: 576px) {
-            .address {
-                top: 50%;
-                right: 0;
-                transform: translate(25%, -50%);
-                background-color: rgba(255, 255, 255, 0.4);
-                border-radius: 15px;
-                position: absolute;
-            }
+        .card {
+            transition: box-shadow .3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .gmaps,
+        .gmaps>iframe {
+            width: 100%;
+            height: 500px;
         }
     </style>
 @endsection
 
 @section('content')
     <section>
-        <div class="container container-padding top-margin">
-            <div class="row title">
-                <div class="col">
-                    <div class="text-start text-sm-center">
-                        <h2 class="fw-bold font-big-one" data-aos="fade-right" data-aos-delay="200">Contact Us</h2>
-                        <p data-aos="fade-right" data-aos-delay="500">Want to talk to us about your plans?<br>Tell us!</p>
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-12 p-0 banner-img-container">
+                    {{-- style="background-image: url({{ Voyager::image($project->image) }});filter:brightness(0.4);"> --}}
+                    <div class="banner-img">
+                        <img src="{{ url('storage/' . setting('banner.contact_us_banner')) }}" alt=""
+                            class="position-absolute w-100 rellax" data-rellax-speed="-3"
+                            style="top: 50%;left:0;transform:translateY(-50%);filter:brightness(0.7);" />
+                    </div>
+
+                    <div class="h-100 d-flex flex-column justify-content-center align-items-center text-light"
+                        data-aos="fade-down">
+                        <div class="text-start text-sm-center pt-5 mt-5">
+                            <h2 class="fw-bold font-big-one" data-aos="fade-right" data-aos-delay="200">Contact Us</h2>
+                            <p class="text-white-50" data-aos="fade-right" data-aos-delay="500">Want to talk to us about
+                                your plans?<br>Tell us!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container container-padding">
             <div class="row form">
-                <div class="col-12 col-sm-8 mx-auto position-relative h-100 d-flex flex-column d-sm-block mt-5" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-12 col-sm-8 mx-auto position-relative h-100 d-flex flex-column d-sm-block"
+                    data-aos="fade-up" data-aos-delay="300">
+
+                    <h3 class="text-gray-500 text-uppercase mb-0 mb-sm-4">Leave us a comment</h3>
 
                     <div class="p-0 p-sm-5 order-2 order-sm-1 mt-5 mt-sm-0 form-content-container">
 
@@ -130,32 +183,53 @@
 
                         </form>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="p-0 p-sm-3 address order-1 order-sm-2 mt-3 mt-sm-0">
-                        <div class="fw-bold">
-
-                            <div class="d-flex flex-column gap-2">
-                                <div class="d-flex flex-wrap gap-3">
-                                    <i class="bi bi-pin-map-fill text-black-50"></i>
-                                    <div>Alam Sutera, South Tangerang</div>
-                                </div>
-                                <div class="d-flex flex-wrap gap-3">
-                                    <i class="bi bi-telephone-fill text-black-50"></i>
-                                    <div>021-30448540</div>
-                                </div>
-                                <div class="d-flex flex-wrap gap-3">
-                                    <i class="bi bi-envelope-at-fill text-black-50"></i>
-                                    <div>Askvivaciliving@gmail.com</div>
-                                </div>
-                                <div class="d-flex flex-wrap gap-3">
-                                    <i class="bi bi-clock-fill text-black-50"></i>
-                                    <div>09:00 - 17:00<br>Monday - Friday</div>
-                                </div>
-                            </div>
-
+    <section>
+        <div class="container container-padding">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-light h-100 text-center">
+                        <div class="card-body text-gray-500">
+                            <i class="bi bi-telephone-fill font-big-two text-gray-400"></i>
+                            <h5 class="card-title text-gray-500 mt-4">Call Us</h5>
+                            <p class="card-text text-gray-400">021-30448540</p>
                         </div>
                     </div>
                 </div>
+                <div class="col" data-aos="fade-down" data-aos-delay="300">
+                    <div class="card border-light h-100 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-envelope-at-fill font-big-two text-gray-400"></i>
+                            <h5 class="card-title text-gray-500 mt-4">Our Email</h5>
+                            <p class="card-text text-gray-400">Askvivaciliving@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card border-light h-100 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-pin-map-fill font-big-two text-gray-400"></i>
+                            <h5 class="card-title text-gray-500 mt-4">Our Address</h5>
+                            <p class="card-text text-gray-400">Alam Sutera, South Tangerang</p>
+                            {{-- <div>09:00 - 17:00<br>Monday - Friday</div> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid m-0 p-0">
+            <div class="gmaps" data-aos="fade-up" data-aos-delay="300">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2468778537755!2d106.65862181485939!3d-6.2311498627575315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbdea068c6ff%3A0x458e3e087e0ed716!2sVivaci%20Living!5e0!3m2!1sen!2sid!4v1670428353910!5m2!1sen!2sid"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -178,5 +252,12 @@
 
             return false;
         });
+    </script>
+
+    {{-- Parallax --}}
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+        // Accepts any class name
+        var rellax = new Rellax('.rellax');
     </script>
 @endsection

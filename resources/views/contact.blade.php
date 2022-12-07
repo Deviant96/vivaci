@@ -83,13 +83,13 @@
             <div class="row title">
                 <div class="col">
                     <div class="text-start text-sm-center">
-                        <h2 class="fw-bold font-big-one">Contact Us</h2>
-                        <p>Want to talk to us about your plans?<br>Tell us!</p>
+                        <h2 class="fw-bold font-big-one" data-aos="fade-right" data-aos-delay="200">Contact Us</h2>
+                        <p data-aos="fade-right" data-aos-delay="500">Want to talk to us about your plans?<br>Tell us!</p>
                     </div>
                 </div>
             </div>
             <div class="row form">
-                <div class="col-12 col-sm-8 mx-auto position-relative h-100 d-flex flex-column d-sm-block mt-5">
+                <div class="col-12 col-sm-8 mx-auto position-relative h-100 d-flex flex-column d-sm-block mt-5" data-aos="fade-up" data-aos-delay="300">
 
                     <div class="p-0 p-sm-5 order-2 order-sm-1 mt-5 mt-sm-0 form-content-container">
 

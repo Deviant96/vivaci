@@ -139,7 +139,7 @@
         <div class="container container-padding">
             <div class="row">
                 <div class="col-12">
-                    <div class="text-sm-center d-flex flex-column align-items-sm-center py-3">
+                    <div class="text-sm-center d-flex flex-column align-items-sm-center py-3" data-aos="fade-down">
                         <h2>About Us</h2>
                         <p>Whether you're looking for a modern update or something more traditional, we've
                             got the expertise and creative vision to help bring your vision to life.</p>
@@ -149,24 +149,24 @@
             <div class="row justify-content-sm-center gap-5">
                 <div class="col-12 col-sm-6 d-flex justify-content-end position-relative" style="height: 500px;width: 500px;">
                     <div class="home-about-image-top img-container rounded-4 img-shadow"
-                        style="position: absolute;bottom: 0;right: 0;z-index: 41;">
+                        style="position: absolute;bottom: 0;right: 0;z-index: 41;" data-aos="fade-up">
                         <img src="{{ asset('/img/home-about-1.jpg') }}" width="300" height="300" alt="" />
                     </div>
                     <div class="home-about-image-below img-container rounded-4 img-shadow"
-                        style="position: absolute;top: 0;left: 0;z-index: 40;">
+                        style="position: absolute;top: 0;left: 0;z-index: 40;" data-aos="fade-right">
                         <img src="{{ asset('/img/home-about-2.jpg') }}" width="300" height="300" alt="" />
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 d-flex">
                     <div class="d-flex justify-content-sm-center flex-column">
                         <div class="pe-sm-5">
-                            <h3 class="display-5 fw-bold">Brighten Up Your Living</h3>
-                            <p class="fs-5 text-black-50">Innovate Your Home</p>
-                            <p class="mb-5">Our team of interior designers is here to help you make your dream home a
+                            <h3 class="display-5 fw-bold" data-aos="fade-left">Brighten Up Your Living</h3>
+                            <p class="fs-5 text-black-50" data-aos="fade-up">Innovate Your Home</p>
+                            <p class="mb-5" data-aos="fade-up">Our team of interior designers is here to help you make your dream home a
                                 reality. Whether you're looking to make over an existing space or build from scratch, we can
                                 take care of every step of the process—allowing you to focus on what matters most: living
                                 well in your space.</p>
-                            <a href="{{ route('about') }}" class="primary-link">About Us</a>
+                            <a href="{{ route('about') }}" class="primary-link" data-aos="fade-up">About Us</a>
                         </div>
                     </div>
                 </div>
@@ -230,8 +230,10 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-uppercase fs-6 fw-bold text-black-50">Projects</h2>
-                        <h3 class="fw-bold font-big-one">Awesome things we’ve done</h3>
+                        <div data-aos="fade-right">
+                            <h2 class="text-uppercase fs-6 fw-bold text-black-50">Projects</h2>
+                            <h3 class="fw-bold font-big-one">Awesome things we’ve done</h3>
+                        </div>
                     </div>
                     
                 </div>
@@ -243,7 +245,7 @@
                         
                         @if ($i == 0)
                             <div class="col-12 col-sm-6">
-                                <div class="viva-card img-shadow">
+                                <div class="viva-card img-shadow" data-aos="fade-right">
                                     <div class="viva-card__image first" style="background-image:url({{ Voyager::image( $item->image ) }});"></div>  
                                     <div class="viva-card__text">
                                         <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
@@ -257,7 +259,7 @@
                             <div class="col-12 col-sm-6 home-projects-second-image-container">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="viva-card img-shadow">
+                                        <div class="viva-card img-shadow" data-aos="fade-down">
                                             <div class="viva-card__image second" style="background-image:url({{ Voyager::image( $item->image ) }});"></div>  
                                             <div class="viva-card__text">
                                                 <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
@@ -269,7 +271,7 @@
                         @endif
                         @if ($i == 2)
                                     <div class="col-12" style="margin-top: 40px">
-                                        <div class="viva-card img-shadow">
+                                        <div class="viva-card img-shadow" data-aos="fade-left">
                                             <div class="viva-card__image third" style="background-image:url({{ Voyager::image( $item->image ) }});"></div>  
                                             <div class="viva-card__text">
                                                 <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
@@ -289,7 +291,7 @@
                 </div>
 
                 <div class="row mt-5">
-                    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                    <div class="col-12 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
                         <p>Checkout more of our projects</p>
                         <div>
                             @foreach ($categories as $item)
@@ -304,7 +306,7 @@
     </section>
 
     {{-- Services --}}
-    <section style="background-color:#E8E8E8">
+    {{-- <section style="background-color:#E8E8E8">
         <div class="container container-padding">
             <div class="row">
                 <div class="col">
@@ -327,46 +329,46 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- Why Us --}}
     <section>
         <div class="container container-padding">
             <div class="row">
                 <div class="col">
-                    <div class="text-sm-center">
+                    <div class="text-sm-center" data-aos="fade-down">
                         <p class="text-muted text-uppercase">Every Space Count</p>
                         <h2 class="font-big-one">Why Choose Us</h2>
                     </div>
                 </div>
             </div>
             <div class="row mt-3 g-3 g-sm-5">
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-sm-4" data-aos="fade-right">
                     <i class="bi bi-calendar-check-fill font-big-two color-primary"></i>
                     <h3 class="mt-3">Building Planning</h3>
                     <p class="text-gray-500">Our team of experts will work with you to design a space that fits your needs. We'll help you find the right location, and we'll handle all the red tape so you don't have to think about it.sp</p>
                 </div>
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-sm-4" data-aos="fade-right">
                     <i class="bi bi-box font-big-two color-primary"></i>
                     <h3 class="mt-3">Interior Space</h3>
                     <p class="text-gray-500">We understand that your space is a reflection of your business, and we want to help you create the perfect environment for your needs.</p>
                 </div>
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-sm-4" data-aos="fade-right">
                     <i class="bi bi-building-fill font-big-two color-primary"></i>
                     <h3 class="mt-3">Small Offices</h3>
                     <p class="text-gray-500">We believe in the value of detail—the small things matter, and when they're done right, they can make a huge difference.</p>
                 </div>
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-sm-4" data-aos="fade-right">
                     <i class="bi bi-rulers font-big-two color-primary"></i>
                     <h3 class="mt-3">Reinovating Space</h3>
                     <p class="text-gray-500">We make sure that every project is unique and there is no cookie-cutter approach to our work. We love what we do, and it shows in our work.</p>
                 </div>
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-sm-4" data-aos="fade-right">
                     <i class="bi bi-house-door-fill font-big-two color-primary"></i>
                     <h3 class="mt-3">Real Estates</h3>
                     <p class="text-gray-500">We specialize in providing affordable luxury for all kinds of homes: from humble apartments to mansions with acres of land.</p>
                 </div>
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-sm-4" data-aos="fade-right">
                     <i class="bi bi-briefcase-fill font-big-two color-primary"></i>
                     <h3 class="mt-3">Free Consultation</h3>
                     <p class="text-gray-500">We offer free consultations to make sure that we're able to meet your needs and make sure that you have the best experience possible when working with us.</p>
@@ -428,15 +430,15 @@
             <div class="row">
                 <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">
                     <div>
-                        <h2 class="text-uppercase fs-6 fw-bold text-black-50">Our Team</h2>
-                        <p class="font-big-two fw-bold">Trusted Design Team</p>
-                        <p class="mb-5">Our hands-on approach to design ensures that our team utilizes their skills and
+                        <h2 class="text-uppercase fs-6 fw-bold text-black-50" data-aos="fade-right" data-aos-delay="100">Our Team</h2>
+                        <p class="font-big-two fw-bold" data-aos="fade-right" data-aos-delay="400">Trusted Design Team</p>
+                        <p class="mb-5" data-aos="fade-right" data-aos-delay="700">Our hands-on approach to design ensures that our team utilizes their skills and
                             creative vision
                             to produce memorable, unique, and timeless designs for our clients.</p>
                         <div class="row gy-4">
                             @foreach ($teams as $item)
                                 <div class="col-6">
-                                    <a href="{{$item->slug}}" class="primary-link">{{$item->name}} team</a>
+                                    <a href="{{$item->slug}}" class="primary-link" data-aos="fade-up">{{$item->name}} team</a>
                                 </div>
                             @endforeach
                         </div>
@@ -444,7 +446,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 mt-5 mt-sm-0">
-                    <div class="position-relative home-ourteam-image-container">
+                    <div class="position-relative home-ourteam-image-container" data-aos="fade-left" data-aos-delay="1000">
                         <img src="{{ url('img/team.bmp') }}" alt="" class="position-sm-absolute img-shadow home-ourteam-image" />
                     </div>
                 </div>
@@ -457,7 +459,7 @@
         <div class="container container-padding">
             <div class="row">
                 <div class="col">
-                    <h2 class="text-light mb-3">Find us on Instagram <a href="{{ url('https://www.instagram.com/vivaciliving/') }}" target="_blank">@vivaciliving</a></h2>
+                    <h2 class="text-light mb-3" data-aos="fade-right">Find us on Instagram <a href="{{ url('https://www.instagram.com/vivaciliving/') }}" target="_blank">@vivaciliving</a></h2>
                     <!-- Place <div> tag where you want the feed to appear -->
                         <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank"
                             class="crt-logo crt-tag">Powered by Curator.io</a></div>
@@ -486,7 +488,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div style="background-color:#E8E8E8">
+                    <div style="background-color:#E8E8E8" data-aos="fade-right">
                         <div class="py-5 text-sm-center d-flex flex-column gap-3 justify-content-center align-items-center">
                             <div class="py-5">
                                 <h2>Have an idea in your mind?

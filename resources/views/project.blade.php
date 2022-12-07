@@ -5,9 +5,10 @@
 
 @section('style')
     <style>
-        .navbar:not(.nav-active) .navbar-nav > .nav-item > .nav-link {
+        .navbar:not(.nav-active) .navbar-nav>.nav-item>.nav-link {
             color: #ffffff;
         }
+
         .banner-img-container {
             height: 350px;
             overflow: hidden;
@@ -23,9 +24,9 @@
 
         .banner-img {
             /* background-size: cover;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed; */
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-attachment: fixed; */
             height: 100%;
             position: absolute;
             width: 100%;
@@ -72,7 +73,8 @@
                             style="top: 50%;left:0;transform:translateY(-50%);filter:brightness(0.4);" />
                     </div>
 
-                    <div class="h-100 d-flex flex-column justify-content-center align-items-center text-light">
+                    <div class="h-100 d-flex flex-column justify-content-center align-items-center text-light"
+                        data-aos="fade-down">
                         <h2 class="fw-bold m-0">{{ $project->title }}</h2>
                         @isset($project->desc)
                             <div class="mb-0">{!! $project->desc !!}</div>
@@ -95,13 +97,17 @@
 
             <div class="row">
                 <div class="col-12 py-5 p-sm-5">
-                    <h3 class="text-center mb-5">Gallery</h3>
+                    <h3 class="text-center mb-5" data-aos="fade-left">Gallery</h3>
                     <div class="row gy-3">
                         <?php $images = json_decode($project->images); ?>
+                        @php($counter = 10)
                         @foreach ($images as $image)
                             <div class="col-6 col-sm-4 project-img-container">
-                                <img class="h-100 w-100 project-img" alt="Image gallery of {{ $project->title }}" src="{{ Voyager::image($image) }}" loading="lazy" />
+                                <img class="h-100 w-100 project-img" alt="Image gallery of {{ $project->title }}"
+                                    src="{{ Voyager::image($image) }}" loading="lazy" data-aos="fade-right"
+                                    data-aos-delay="{{ $counter }}" />
                             </div>
+                            @php($counter = $counter + 10)
                         @endforeach
                     </div>
                 </div>

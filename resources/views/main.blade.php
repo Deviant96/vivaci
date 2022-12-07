@@ -378,7 +378,7 @@
     </section>
 
     {{-- Products --}}
-    <section>
+    {{-- <section>
         <div class="container py-5">
             <div class="row">
                 <div class="col-6">
@@ -422,7 +422,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- Our Team --}}
     <section class="overflow-hidden">

@@ -15,6 +15,7 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
-        "browser-sync-webpack-plugin": "^2.3.0"
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "loading-attribute-polyfill": "^2.1.0"
     }
 }

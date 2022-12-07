@@ -414,6 +414,21 @@ nav.navbar {
     color: var(--primary-color);
 }
 
+.dropdown-icon {
+    font-size: 12px;
+    transition: all .3s ease;
+}
+.nav-item.dropdown:hover .dropdown-icon {
+    color: var(--primary-color) !important;
+    transform: rotate(180deg);
+}
+.nav-item.dropdown > .nav-link {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 
 .caret::before {
     display: inline-block;

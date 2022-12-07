@@ -60,7 +60,7 @@
             <span>{{ $item->title }}</span>
             {!! $caret !!}
             @if(!$originalItem->children->isEmpty())
-            <img src="{{ asset('/img/caret-down-outline.svg') }}" width="8" alt="" />
+            <i class="bi bi-caret-down-fill dropdown-icon"></i>
             @endif
         </a>
         @if(!$originalItem->children->isEmpty())

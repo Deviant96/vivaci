@@ -64,9 +64,9 @@
             color: var(--primary-color);
         }
 
-        .navbar:not(.nav-active) { /* Give navbar light background at the top because the banner is dark */
-            background-color: #fff;
-            box-shadow: 5px -1px 12px -5px grey;
+        /* We make it white color because banner has dark background */
+        .navbar:not(.nav-active) .navbar-nav>.nav-item>.nav-link {
+            color: #ffffff;
         }
     </style>
 @endsection

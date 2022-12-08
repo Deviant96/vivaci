@@ -117,7 +117,7 @@
                     {{-- style="background-image: url({{ Voyager::image($project->image) }});filter:brightness(0.4);"> --}}
                     <div class="banner-img">
                         <img src="{{ url('storage/' . setting('banner.contact_us_banner')) }}" alt=""
-                            class="position-absolute w-100 rellax" data-rellax-speed="-3"
+                            class="w-100 contact-banner" data-rellax-speed="-3"
                             style="top: 50%;left:0;transform:translateY(-50%);filter:brightness(0.7);" />
                     </div>
 
@@ -255,9 +255,12 @@
     </script>
 
     {{-- Parallax --}}
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script>
-        // Accepts any class name
-        var rellax = new Rellax('.rellax');
+        var image = document.getElementsByClassName('contact-banner');
+        new simpleParallax(image, {
+            delay: .6,
+            transition: 'cubic-bezier(0,0,0,1)'
+        });
     </script>
 @endsection

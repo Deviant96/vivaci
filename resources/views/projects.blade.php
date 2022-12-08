@@ -41,6 +41,53 @@
                 max-height: 350px;
             }
         } */
+
+        .project-card{
+            height: 100%;
+        }
+        .project-card__image {
+            height: 390px;
+            width: 100%;
+            position: relative;
+        }
+        .project-card__image::after {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-color: rgba(24,24,24,.4);
+            opacity: 0;
+            
+            transition: all .3s ease;
+        }
+        .project-card:hover .project-card__image::after {
+            opacity: 1;
+        }
+        .project-card__image > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .project-card__body {
+            margin-top: 1.5rem;
+        }
+        .project-card__body > h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+        .project-card__link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 1;
+        }
     </style>
 @endsection
 
@@ -64,16 +111,16 @@
             <div class="row g-5">
 
                 @foreach ($category as $project)
-                    <div class="col-12 col-sm-6">
-                        <div class="card h-100" data-aos="fade-up">
-                            <img src="{{ Voyager::image($project->image) }}" class="card-img-top" alt="">
+                    <div class="col-12 col-sm-3">
+                        <div class="project-card" data-aos="fade-up">
 
-                            <div class="card-body">
-                                <h3 class="card-title">{{ $project->title }}</h3>
-                                <p class="card-text">{!! $project->desc !!}</p>
-
-                                <a href="{{ url()->current() }}/{{ $project->slug }}" class="stretched-link">View</a>
+                            <div class="project-card__image">
+                                <img src="{{ Voyager::image($project->image) }}" alt="">
                             </div>
+                            <div class="project-card__body">
+                                <h3>{{ $project->title }}</h3>
+                            </div>
+                            <a href="{{ url()->current() }}/{{ $project->slug }}" class="project-card__link"></a>
 
                         </div>
                     </div>

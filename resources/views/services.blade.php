@@ -2,6 +2,7 @@
 
 @section('style')
     <style>
+        .simpleParallax { height: 100%; }
         .banner-img-container {
             height: 550px;
             overflow: hidden;
@@ -10,7 +11,7 @@
 
         @media (max-width:576px) {
             .banner-img-container {
-                height: 300px;
+                height: 350px;
                 background-position: bottom;
             }
         }
@@ -22,9 +23,9 @@
             z-index: -1;
         }
 
-        .banner-img>img {
-            min-height: 100%;
-            max-height: 100%;
+        .banner-img__img {
+            height: 100%;
+            width:  100%;
             object-fit: cover;
         }
 
@@ -110,6 +111,15 @@
             margin-bottom: 20px;
             transition: opacity .4s ease-out;
         }
+
+        @media (max-width:576px) {
+            .form-img {
+                width: 100%;
+                max-height: 200px;
+                object-fit: cover;
+            }
+        }
+        
     </style>
 @endsection
 
@@ -122,11 +132,12 @@
                     {{-- style="background-image: url({{ Voyager::image($project->image) }});filter:brightness(0.4);"> --}}
                     <div class="banner-img">
                         <img src="{{ url('storage/' . setting('banner.services_banner')) }}" alt=""
-                            class="w-100 banner-img__img"
+                            class="banner-img__img"
                             style="filter:brightness(0.7);" />
                     </div>
 
-                    <div class="h-100 d-flex flex-column justify-content-center align-items-center text-light"
+                    <div class="container h-100">
+                        <div class="h-100 d-flex flex-column justify-content-center align-items-center text-light"
                         data-aos="fade-down">
                         <div class="text-start text-sm-center pt-5 mt-5">
                             <h2 class="fw-bold font-big-one" data-aos="fade-right" data-aos-delay="200">Amazing Services by
@@ -135,6 +146,8 @@
                             </p>
                         </div>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -210,7 +223,7 @@
         <div class="container container-padding">
             <div class="row">
                 <div class="col">
-                    <div class="text-center mt-3">
+                    <div class="text-sm-center mt-3">
                         <h2 data-aos="fade-right">What We Provide</h2>
                         <p data-aos="fade-left">Vivaci Living is full services Interior Design firm, providing a high
                             quality product and services
@@ -221,9 +234,9 @@
             </div>
             <div class="row mt-5">
                 @foreach ($em as $service)
-                    <div class="col-4" data-aos="fade-right">
+                    <div class="col-12 col-sm-4" data-aos="fade-right">
                         <img src="{{ Voyager::image($service->icon) }}" width="50" height="50" />
-                        <h3 class="mt-5">{{ $service->title }}</h3>
+                        <h3 class="mt-3 mt-sm-5">{{ $service->title }}</h3>
                         <p>{{ $service->brief_description }}</p>
                         <a href="{{ url()->current() . '/' . $service->slug }}" class="primary-link mt-3">Learn more</a>
                     </div>
@@ -235,14 +248,14 @@
     <section>
         <div class="container py-5">
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-sm-4">
                     <div class="img-container w-100">
                         <img src="{{ asset('img/services-form-img.jpg') }}" alt=""
-                            class="form-img" data-rellax-speed="-1" data-rellax-zindex="5" />
+                            class="form-img" />
 
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-12 col-sm-8 mt-5 mt-sm-0">
                     <div class="d-flex flex-column justify-content-center h-100">
                         <h2 class="fs-1">Let's get started</h2>
                         <div class="mt-4">

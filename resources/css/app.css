@@ -1,7 +1,8 @@
 @import "fonts.css";
 @import "normalize.css";
-@import "nav.css";
+@import "base.css";
 
+@import "nav.css";
 @import "whatsapp.css";
 @import "banner.css";
 
@@ -15,60 +16,6 @@
 
 .color-primary {
     color: var(--primary-color);
-}
-
-::selection {
-    background-color: var(--primary-color);
-    color: #FFFFFF;
-}
-
-/* Overrides */
-
-body {
-    font-family: "Apercu Pro", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Milchella";
-
-    /* font-weight: bold;
-    font-weight: 900; */
-    font-size: 2em;
-
-    line-height: 50px;
-    /* color:rgb(152, 152, 152); */
-}
-
-h3 {
-    font-size: 1.6em;
-}
-
-h4 {
-    font-size: 1.4em;
-}
-
-h5 {
-    font-size: 1.2em;
-}
-
-h6 {
-    font-size: 1em;
-}
-
-p {
-    font-family: "Apercu Pro", sans-serif;
-    line-height: 30px;
-    font-size: 15px;
-    font-weight: 200;
-}
-
-ul, li {
-    padding: 0;
 }
 
 .font-big-one {
@@ -90,10 +37,7 @@ ul, li {
     /* 18px */
 }
 
-a:hover {
-    color: var(--primary-color);
-    transition: all .3s ease;
-}
+
 
 @media (max-width:576px) {
     .container {

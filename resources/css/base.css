@@ -1,0 +1,51 @@
+::selection {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+body {
+    font-family: "Apercu Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Milchella";
+    font-size: 2em;
+    line-height: 50px;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+p {
+    font-family: "Apercu Pro", sans-serif;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+ul, li {
+    padding: 0;
+}
+
+a:hover {
+    color: var(--primary-color);
+    transition: all .3s ease;
+}

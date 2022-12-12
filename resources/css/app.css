@@ -1,3 +1,4 @@
+@import "fonts.css";
 @import "normalize.css";
 @import "nav.css";
 
@@ -39,7 +40,7 @@
 /* Overrides */
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Apercu Pro", sans-serif;
 }
 
 h1,
@@ -48,10 +49,14 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Sansation', sans-serif;
-    font-weight: bold;
-    font-weight: 900;
+    font-family: "Milchella";
+
+    /* font-weight: bold;
+    font-weight: 900; */
     font-size: 2em;
+
+    line-height: 50px;
+    /* color:rgb(152, 152, 152); */
 }
 
 h3 {
@@ -71,7 +76,10 @@ h6 {
 }
 
 p {
-    font-family: 'Inter', sans-serif;
+    font-family: "Apercu Pro", sans-serif;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 200;
 }
 
 ul, li {
@@ -92,7 +100,6 @@ ul, li {
 }
 
 .font-para-one {
-    font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 1.125rem;
     /* 18px */

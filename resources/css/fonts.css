@@ -1,0 +1,9 @@
+@import "../fonts/apercu-pro/stylesheet.css";
+
+@font-face {
+    font-family: 'Milchella';
+    src: local('Milchella Regular'), local('Milchella-Regular'),
+        url('../fonts/milchella/Milchella-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

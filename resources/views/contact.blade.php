@@ -100,7 +100,7 @@
                         data-aos="fade-down">
                         <div class="text-start text-sm-center pt-5 mt-5">
                             <h2 class="fw-bold font-big-one" data-aos="fade-right" data-aos-delay="200">Contact Us</h2>
-                            <p class="text-white-50" data-aos="fade-right" data-aos-delay="500">Want to talk to us about
+                            <p class="text-white" data-aos="fade-right" data-aos-delay="500">Want to talk to us about
                                 your plans?<br>Tell us!
                             </p>
                         </div>

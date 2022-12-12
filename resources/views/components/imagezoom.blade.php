@@ -2,9 +2,10 @@
 <div class="modal fade" id="zoomModal" aria-hidden="true" aria-labelledby="zoomModalLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
-            <div class="modal-body">
-                <img class="modal-content" id="img01">
+            <div class="btn-close-container">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <img class="modal-content" id="img01">
         </div>
     </div>
 </div>

@@ -201,6 +201,24 @@ a.primary-link {
     box-shadow: 15px 15px 40px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Close button on modal */
+.btn-close {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+}
+
+.btn-close-container {
+    background-color: #FFF;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+}
+
 .viva-card {
     width: 100%;
     height: auto;

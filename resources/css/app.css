@@ -6,14 +6,6 @@
 @import "whatsapp.css";
 @import "banner.css";
 
-:root {
-    --primary-color: #F2994A;
-    --nav-height: 90px;
-
-    --container-padding-desktop: 90px;
-    --container-padding-mobile: 45px;
-}
-
 .color-primary {
     color: var(--primary-color);
 }

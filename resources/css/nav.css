@@ -382,8 +382,8 @@ nav.navbar {
     transition: 0.3s ease-in-out;
 }
 
-.navbar.nav-active .menu-icon__line {
-    background-color: #000000;
+body.nav-active .navbar.nav-active .menu-icon__line {
+    background-color: #FFFFFF;
 }
 
 .nav-active {

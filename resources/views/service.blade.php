@@ -3,40 +3,6 @@
 {{-- Image zooming component --}}
 @php($imageZoom = true)
 
-@section('style')
-    <style>
-        .banner-img-container {
-            height: 350px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        @media (max-width:576px) {
-            .banner-img-container {
-                height: 300px;
-                background-position: bottom;
-            }
-        }
-
-        .banner-img {
-            height: 100%;
-            position: absolute;
-            width: 100%;
-            z-index: -1;
-        }
-
-        .banner-img>img {
-            min-height: 100%;
-            max-height: 100%;
-            object-fit: cover;
-        }
-
-        .simpleParallax {
-            height: 100%;
-        }
-    </style>
-@endsection
-
 @section('content')
     <section>
         <div class="container top-margin">
@@ -61,11 +27,11 @@
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-12 p-0 banner-img-container">
+                <div class="col-12 p-0 banner-container">
                     {{-- style="background-image: url({{ Voyager::image($project->image) }});filter:brightness(0.4);"> --}}
-                    <div class="banner-img">
+                    <div class="banner-image">
                         <img src="{{ Voyager::image($service->image) }}" alt=""
-                            class="w-100 banner-img__img" />
+                            class="w-100 banner-image__img" />
                     </div>
                 </div>
             </div>

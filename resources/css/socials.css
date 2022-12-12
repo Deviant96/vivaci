@@ -1,0 +1,33 @@
+.socials {
+    display: flex;
+}
+
+.socials>a {
+    transform: scale(75%);
+
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    border: 2px solid #555555;
+    border-radius: 50px;
+    translate: all .3s ease;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials>a:hover {
+    border-color: var(--primary-color);
+}
+
+.socials>a:hover svg {
+    fill: var(--primary-color);
+}
+
+.socials>a>svg {
+    max-width: 32px;
+    max-height: 32px;
+    transition: all .3s ease;
+}

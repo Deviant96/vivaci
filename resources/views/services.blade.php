@@ -234,7 +234,7 @@
             </div>
             <div class="row mt-5">
                 @foreach ($em as $service)
-                    <div class="col-12 col-sm-4" data-aos="fade-right">
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0" data-aos="fade-right">
                         <img src="{{ Voyager::image($service->icon) }}" width="50" height="50" />
                         <h3 class="mt-3 mt-sm-5">{{ $service->title }}</h3>
                         <p>{{ $service->brief_description }}</p>

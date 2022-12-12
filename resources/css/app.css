@@ -2,6 +2,7 @@
 @import "normalize.css";
 @import "nav.css";
 
+@import "whatsapp.css";
 @import "banner.css";
 
 :root {
@@ -19,24 +20,6 @@
 ::selection {
     background-color: var(--primary-color);
     color: #FFFFFF;
-}
-
-/* Whatsapp */
-.whatsapp {
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    z-index: 999;
-
-    width: 60px;
-    height: 60px;
-
-    border-radius: 50%;
-    background: green;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Overrides */

@@ -9,36 +9,6 @@
             color: #ffffff;
         }
 
-        .banner-img-container {
-            height: 350px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        @media (max-width:576px) {
-            .banner-img-container {
-                height: 170px;
-                background-position: bottom;
-            }
-        }
-
-        .banner-img {
-            /* background-size: cover;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-attachment: fixed; */
-            height: 100%;
-            position: absolute;
-            width: 100%;
-            z-index: -1;
-        }
-
-        @media (max-width:576px) {
-            .banner-img {
-                background-position: bottom;
-            }
-        }
-
         .project-img-container {
             height: 240px;
         }
@@ -66,14 +36,15 @@
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-12 p-0 banner-img-container">
+                <div class="col-12 p-0 banner-container">
                     {{-- style="background-image: url({{ Voyager::image($project->image) }});filter:brightness(0.4);"> --}}
-                    <div class="banner-img">
-                        <img src="{{ Voyager::image($project->image) }}" alt="" class="position-absolute w-100"
-                            style="top: 50%;left:0;transform:translateY(-50%);filter:brightness(0.4);" />
+                    <div class="banner-image">
+                        <img src="{{ Voyager::image($project->image) }}" alt="" 
+                            class="banner-image__img"
+                            style="filter:brightness(0.4);" />
                     </div>
 
-                    <div class="h-100 d-flex flex-column justify-content-center align-items-center text-light"
+                    <div class="banner-text h-100 d-flex flex-column justify-content-center align-items-center text-light"
                         data-aos="fade-down">
                         <h2 class="fw-bold m-0">{{ $project->title }}</h2>
                         @isset($project->desc)
@@ -115,4 +86,16 @@
 
         </div>
     </section>
+@endsection
+
+@section('scripts')
+    {{-- Test for another parallax --}}
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script>
+        var image = document.getElementsByClassName('banner-image__img');
+        new simpleParallax(image, {
+            delay: .6,
+	        transition: 'cubic-bezier(0,0,0,1)'
+        });
+    </script>
 @endsection

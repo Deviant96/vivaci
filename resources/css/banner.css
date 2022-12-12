@@ -1,0 +1,37 @@
+/* Banner with image element as background and texts on top of it */
+
+.banner-container {
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width:576px) {
+    .banner-container {
+        height: 350px;
+        background-position: bottom;
+    }
+}
+
+.banner-container .banner-image {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.banner-container .banner-image .banner-image__img {
+    height: 100%;
+    width:  100%;
+    object-fit: cover;
+}
+
+.banner-container .banner-image .simpleParallax {
+    height: 100%;
+}
+
+@media (max-width:576px) {
+    .banner-container .banner-img {
+        background-position: bottom;
+    }
+}

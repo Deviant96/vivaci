@@ -2,6 +2,8 @@
 @import "normalize.css";
 @import "nav.css";
 
+@import "banner.css";
+
 :root {
     --primary-color: #F2994A;
     --nav-height: 90px;

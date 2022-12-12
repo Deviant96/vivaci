@@ -30,6 +30,10 @@
             max-height: 100%;
             object-fit: cover;
         }
+
+        .simpleParallax {
+            height: 100%;
+        }
     </style>
 @endsection
 
@@ -38,10 +42,10 @@
         <div class="container top-margin">
 
             <div class="row py-5 mt-3">
-                <div class="col-6">
+                <div class="col-12 col-sm-6">
                     <h2 class="fw-bold">{{ $service->title }}</h2>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-6">
                     <div>
                         <div>
                             <p class="text-muted">{{ $service->description }}</p>
@@ -70,10 +74,10 @@
     </section>
 
     <section>
-        <div class="container">
+        <div class="container container-padding">
 
             <div class="row">
-                <div class="col-12 p-5">
+                <div class="col-12 p-0 p-sm-5">
                     <h3 class="text-center fw-bold">See us on action</h3>
                     <div class="row gy-3">
                         {{-- {{ $images = json_decode($service->gallery); }}
@@ -83,7 +87,7 @@
                     </div>
                     @endforeach --}}
                         @foreach (json_decode($service->gallery) as $image)
-                            <div class="col-4" style="height: 240px">
+                            <div class="col-6 col-sm-4 gallery-item">
                                 <img class="h-100 w-100" src="{{ Voyager::image($image) }}" />
                             </div>
                         @endforeach

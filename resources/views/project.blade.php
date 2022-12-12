@@ -44,7 +44,7 @@
                             style="filter:brightness(0.4);" />
                     </div>
 
-                    <div class="banner-text h-100 d-flex flex-column justify-content-center align-items-center text-light"
+                    <div class="container banner-text h-100 d-flex flex-column justify-content-center align-items-center text-light"
                         data-aos="fade-down">
                         <h2 class="fw-bold m-0">{{ $project->title }}</h2>
                         @isset($project->desc)

@@ -2,6 +2,8 @@
 
 {{-- Image zooming component --}}
 @php($imageZoom = true)
+{{-- Masonry component --}}
+@php($enableMasonry = true)
 
 @section('style')
     <style>
@@ -69,13 +71,13 @@
             <div class="row">
                 <div class="col-12 py-5 p-sm-5">
                     <h3 class="text-center mb-5" data-aos="fade-left">Gallery</h3>
-                    <div class="row gy-3">
+                    <div class="row gy-3 grid">
                         <?php $images = json_decode($project->images); ?>
                         @php($counter = 10)
                         @foreach ($images as $image)
-                            <div class="col-6 col-sm-4 project-img-container">
-                                <img class="h-100 w-100 project-img" alt="Image gallery of {{ $project->title }}"
-                                    src="{{ Voyager::image($image) }}" loading="lazy" data-aos="fade-right"
+                            <div class="col-6 col-sm-4 grid-item">
+                                <img class="h-100 w-100" alt="Image gallery of {{ $project->title }}"
+                                    src="{{ Voyager::image($image) }}" data-aos="fade-right"
                                     data-aos-delay="{{ $counter }}" />
                             </div>
                             @php($counter = $counter + 10)

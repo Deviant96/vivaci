@@ -249,7 +249,7 @@
                                     <div class="viva-card__image first" style="background-image:url({{ Voyager::image( $item->image ) }});"></div>  
                                     <div class="viva-card__text">
                                         <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
-                                        <h3>{{ $item->title }}Tes</h3>
+                                        <h3>{{ $item->title }}</h3>
                                     </div> 
                                     <a href="{{ $project_url }}" class="viva-card__link"></a>
                                 </div>

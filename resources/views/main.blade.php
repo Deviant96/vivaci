@@ -447,7 +447,7 @@
                 </div>
                 <div class="col-12 col-sm-6 mt-5 mt-sm-0">
                     <div class="position-relative home-ourteam-image-container" data-aos="fade-left" data-aos-delay="1000">
-                        <img src="{{ url('img/team.jpg') }}" alt="" class="position-sm-absolute img-shadow home-ourteam-image" />
+                        <img src="{{ url('img/teams/allteam-small.jpg') }}" alt="" class="position-sm-absolute img-shadow home-ourteam-image" />
                     </div>
                 </div>
             </div>

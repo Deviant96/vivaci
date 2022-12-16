@@ -220,9 +220,10 @@
             var name = $("#name").val();
             var email = $("#email").val();
             var message = $("#message").val();
+            var wa = {{ setting('company.wa_number') }};
 
             var win = window.open(
-                `https://web.whatsapp.com/send?text=Hi%20Vivaci%20Living,%0AI%20am%20interested%20in%20your%20service.%20Would%20you%20please%20to%20share%20the%20pricelist?%0A%0AName%20%3A%20*${name}*%0AEmail%20%3A%20*${email}*%0AMessage%20%3A%20*${message}*%0A%0AThank%20you!&phone=6281283746994`,
+                `https://web.whatsapp.com/send?text=Hi%20Vivaci%20Living,%0AI%20am%20interested%20in%20your%20service.%20Would%20you%20please%20to%20share%20the%20pricelist?%0A%0AName%20%3A%20*${name}*%0AEmail%20%3A%20*${email}*%0AMessage%20%3A%20*${message}*%0A%0AThank%20you!&phone=${wa}`,
                 '_blank');
 
             return false;

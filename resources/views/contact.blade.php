@@ -171,7 +171,7 @@
                         <div class="card-body text-gray-500">
                             <i class="bi bi-telephone-fill font-big-two text-gray-400"></i>
                             <h5 class="card-title text-gray-500 mt-4">Call Us</h5>
-                            <p class="card-text text-gray-400">021-30448540</p>
+                            <p class="card-text text-gray-400"><a href="tel:622150106790" class="stretched-link"></a>021 50106790</p>
                         </div>
                     </div>
                 </div>

@@ -139,6 +139,7 @@ a.primary-link {
 }
 .carousel-caption h5 {
     font-size: 6rem;
+    line-height: 1.1em;
 }
 @media (max-width:546px) {
     .carousel {

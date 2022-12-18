@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title', 'Contact us - Vivaci Living')
+@section('meta_keywords', 'contact,vivaci,living,designers,interior')
+@section('meta_description', 'Talk us about your plan or see how you can get closer to us') 
+
 @section('style')
     <style>
         /* We make it white color because banner has dark background */

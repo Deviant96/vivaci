@@ -65,6 +65,10 @@
     </section>
 @endsection
 
+@section('title', $service->title.' service - Vivaci Living')
+@section('meta_keywords', 'service,vivaci,living,designers,interior,'.$service->title)
+@section('meta_description', $service->description) 
+
 @section('scripts')
     {{-- Test for another parallax --}}
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>

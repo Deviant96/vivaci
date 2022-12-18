@@ -90,6 +90,10 @@
     </section>
 @endsection
 
+@section('title', $project->title.' project - Vivaci Living')
+@section('meta_keywords', 'project,vivaci,living,designers,interior')
+@section('meta_description', $project->desc) 
+
 @section('scripts')
     {{-- Test for another parallax --}}
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>

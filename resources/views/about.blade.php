@@ -1,5 +1,11 @@
 @extends('layouts.layout')
 
+@section('title', 'About Vivaci Living')
+@section('meta_keywords', 'about,vivaci,living,designers,interior')
+@section('meta_description', 'We are a team with talented designers
+and great craftsmanship. We want to bring a thoughtful design to the space, not just
+aesthetically pleasing, but also functional.') 
+
 {{-- Image zooming component --}}
 @php($imageZoom = true)
 

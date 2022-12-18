@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title', 'Explore our '.$details->name.' team - Vivaci Living')
+@section('meta_keywords', 'about,vivaci,living,designers,interior,'.$details->name)
+@section('meta_description', $details->description) 
+
 @php($imageZoom = true)
 
 @section('style')

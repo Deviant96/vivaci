@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title', 'All Projects - Vivaci Living')
+@section('meta_keywords', 'project,vivaci,living,designers,interior')
+@section('meta_description', 'Explore all projects made with love by Vivaci Living') 
+
 @section('style')
     <style>
         .card .card-img-top {

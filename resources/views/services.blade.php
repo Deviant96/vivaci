@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('title', 'Our Services - Vivaci Living')
+@section('meta_keywords', 'services,vivaci,living,designers,interior')
+@section('meta_description', 'We provide services to help our customers build things they love') 
+
 @section('style')
     <style>
         .simpleParallax { height: 100%; }

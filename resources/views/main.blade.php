@@ -430,7 +430,7 @@
             <div class="row">
                 <div class="col-12 col-sm-6 d-flex flex-column justify-content-center">
                     <div>
-                        <h2 class="text-uppercase fs-6 fw-bold text-black-50" data-aos="fade-right" data-aos-delay="100">Our Team</h2>
+                        <h2 class="text-uppercase fs-6 fw-bold text-black-50 mb-4" data-aos="fade-right" data-aos-delay="100">Our Team</h2>
                         <p class="font-big-two fw-bold" data-aos="fade-right" data-aos-delay="400">Trusted Design Team</p>
                         <p class="mb-5" data-aos="fade-right" data-aos-delay="700">Our hands-on approach to design ensures that our team utilizes their skills and
                             creative vision

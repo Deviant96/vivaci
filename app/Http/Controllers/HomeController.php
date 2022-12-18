@@ -20,9 +20,10 @@ class HomeController extends Controller
         //                     ->get();
 
         $projects = Project::with('category')
-                            ->orderBy('created_at', 'desc')
-                            ->skip(0)
-                            ->take(3)
+                            ->whereIn('id', [11, 14, 15]) // Find specific project by ID for Kelapa Gading, Puri Kencana and Meiling lee clinic; because of client's request
+                            // ->orderBy('created_at', 'desc')
+                            // ->skip(0)
+                            // ->take(3)
                             ->get();
 
         $teams = Team::get();

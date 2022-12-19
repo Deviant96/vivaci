@@ -6,3 +6,7 @@
         percentPosition: true
     });
 </script>
+
+<script>
+    msnry.layout() // Initialize masonry layout to prevent images overlapping
+</script>

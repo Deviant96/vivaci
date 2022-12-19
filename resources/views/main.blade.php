@@ -459,7 +459,7 @@
                             <source srcset="{{ url('img/teams/allteam-small.webp') }}" type="image/webp">
                             <source srcset="{{ url('img/teams/allteam-small.jpg') }}" type="image/jepg">
                             <img src="{{ url('img/teams/allteam-small.jpg') }}" alt="Vivaci team all members" 
-                            class="position-sm-absolute img-shadow home-ourteam-image" width="636" height="358"/>
+                            class="position-sm-absolute img-shadow home-ourteam-image" width="636" />
                         </picture>
                     </div>
                 </div>

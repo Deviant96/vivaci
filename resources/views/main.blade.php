@@ -150,11 +150,19 @@
                 <div class="col-12 col-sm-6 d-flex justify-content-end position-relative" style="height: 500px;width: 500px;">
                     <div class="home-about-image-top img-container rounded-4 img-shadow"
                         style="position: absolute;bottom: 0;right: 0;z-index: 41;" data-aos="fade-up">
-                        <img src="{{ asset('/img/home-about-1.jpg') }}" width="300" height="300" alt="" />
+                        <picture>
+                            <source srcset="{{ asset('/img/home-about-1.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('/img/home-about-1.jpg') }}" type="image/jepg">
+                            <img src="{{ asset('/img/home-about-1.jpg') }}" width="300" height="300" alt="First interior design example" />
+                        </picture>
                     </div>
                     <div class="home-about-image-below img-container rounded-4 img-shadow"
                         style="position: absolute;top: 0;left: 0;z-index: 40;" data-aos="fade-right">
-                        <img src="{{ asset('/img/home-about-2.jpg') }}" width="300" height="300" alt="" />
+                        <picture>
+                            <source srcset="{{ asset('/img/home-about-2.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('/img/home-about-2.jpg') }}" type="image/jepg">
+                            <img src="{{ asset('/img/home-about-2.jpg') }}" width="300" height="300" alt="Second interior design example" />
+                        </picture>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 d-flex">
@@ -447,7 +455,12 @@
                 </div>
                 <div class="col-12 col-sm-6 mt-5 mt-sm-0">
                     <div class="position-relative home-ourteam-image-container" data-aos="fade-left" data-aos-delay="1000">
-                        <img src="{{ url('img/teams/allteam-small.jpg') }}" alt="" class="position-sm-absolute img-shadow home-ourteam-image" />
+                        <picture>
+                            <source srcset="{{ url('img/teams/allteam-small.webp') }}" type="image/webp">
+                            <source srcset="{{ url('img/teams/allteam-small.jpg') }}" type="image/jepg">
+                            <img src="{{ url('img/teams/allteam-small.jpg') }}" alt="Vivaci team all members" 
+                            class="position-sm-absolute img-shadow home-ourteam-image" width="636" height="358"/>
+                        </picture>
                     </div>
                 </div>
             </div>

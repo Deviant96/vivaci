@@ -9,10 +9,6 @@
 </script>
 
 <script>
-   
-//    msnry.imagesLoaded().progress(function() {
-    
-//     });
     imagesLoaded('.grid', function() {
         msnry.layout() // Initialize masonry layout to prevent images overlapping
     });

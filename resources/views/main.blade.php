@@ -168,7 +168,7 @@
                 <div class="col-12 col-sm-6 d-flex">
                     <div class="d-flex justify-content-sm-center flex-column">
                         <div class="pe-sm-5">
-                            <h3 class="display-5 fw-bold" data-aos="fade-left">Brighten Up Your Living</h3>
+                            <h3 class="display-5 fw-bold" data-aos="fade-right">Brighten Up Your Living</h3>
                             <p class="fs-5 text-black-50" data-aos="fade-up">Innovate Your Home</p>
                             <p class="mb-5" data-aos="fade-up">Our team of interior designers is here to help you make your dream home a
                                 reality. Whether you're looking to make over an existing space or build from scratch, we can
@@ -279,7 +279,7 @@
                         @endif
                         @if ($i == 2)
                                     <div class="col-12" style="margin-top: 40px">
-                                        <div class="viva-card img-shadow" data-aos="fade-left">
+                                        <div class="viva-card img-shadow" data-aos="fade-right">
                                             <div class="viva-card__image third" style="background-image:url({{ Voyager::image( $item->image ) }});"></div>  
                                             <div class="viva-card__text">
                                                 <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
@@ -454,7 +454,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 mt-5 mt-sm-0">
-                    <div class="position-relative home-ourteam-image-container" data-aos="fade-left" data-aos-delay="1000">
+                    <div class="position-relative home-ourteam-image-container" data-aos="fade-right" data-aos-delay="1000">
                         <picture>
                             <source srcset="{{ url('img/teams/allteam-small.webp') }}" type="image/webp">
                             <source srcset="{{ url('img/teams/allteam-small.jpg') }}" type="image/jepg">

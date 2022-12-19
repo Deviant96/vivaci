@@ -4,6 +4,7 @@
             <a class="navbar-brand" href="{{ url('/') }}">
                 @if (setting('site.logo'))
                     <img src="{{ Voyager::image(setting('site.logo')) }}" alt="Logo" height="60" />
+                    <H1 class="d-none">{{ setting('site.title') }}</H1>
                 @else
                     {{ setting('site.title') }}
                 @endif

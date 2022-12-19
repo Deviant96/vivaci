@@ -91,14 +91,14 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="{{ url('storage/'.setting('banner.banner_one')) }}" class="d-block min-hw-100" alt="...">
+                    <img src="{{ url('storage/'.setting('banner.banner_one')) }}" class="d-block min-hw-100" alt="{{ setting('banner.banner_one_description') }}">
                     <div class="carousel-caption">
                         <h5>{{ setting('banner.banner_one_title') }}</h5>
                         <p>{{ setting('banner.banner_one_description') }}</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="{{ url('storage/'.setting('banner.banner_two')) }}" class="d-block min-hw-100" alt="...">
+                    <img src="{{ url('storage/'.setting('banner.banner_two')) }}" class="d-block min-hw-100" alt="{{ setting('banner.banner_two_description') }}">
                     <div class="carousel-caption ">
                         <h5>{{ setting('banner.banner_two_title') }}</h5>
                         <p>{{ setting('banner.banner_two_description') }}</p>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                     <img src="{{ url('storage/'.setting('banner.banner_three')) }}" class="d-block min-hw-100"
-                        alt="...">
+                        alt="{{ setting('banner.banner_three_description') }}">
                     <div class="carousel-caption ">
                         <h5>{{ setting('banner.banner_three_title') }}</h5>
                         <p>{{ setting('banner.banner_three_description') }}</p>

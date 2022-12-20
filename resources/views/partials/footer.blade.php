@@ -10,9 +10,12 @@
         </div>
         <div class="row mt-3 mt-sm-5">
             <div class="col-12 col-sm-4 order-3 order-sm-1 mt-3 mt-sm-0">
-                <h4 class="fw-bold">{{ setting('site.title') }}</h4>
-                <p class="text-muted">Copyrights © {{ date("Y") }}<br>
-                    All Rights Reserved by <span class="text-uppercase">{{ setting('site.title') }}</span></p>
+                {{-- <h4 class="fw-bold">{{ setting('site.title') }}</h4> --}}
+                <div class="fw-bold display-6">{{ setting('site.title') }}</div>
+                {{-- <p class="text-muted">Copyrights © {{ date("Y") }}<br>
+                    All Rights Reserved by <span class="text-uppercase">{{ setting('site.title') }}</span></p> --}}
+                <div class="text-muted">Copyrights © {{ date("Y") }}<br>
+                    All Rights Reserved by <span class="text-uppercase">{{ setting('site.title') }}</span></div>
             </div>
             <div class="col-12 col-sm-4 d-flex justify-content-sm-center order-1 order-sm-2">
                 @include('components.socials-footer')

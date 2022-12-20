@@ -7,10 +7,6 @@
     "file": "assets/ApercuPro-ExtraLight.cc2c1474.eot",
     "src": "resources/fonts/apercu-pro/ApercuPro-ExtraLight.eot"
   },
-  "resources/fonts/apercu-pro/ApercuPro-Black.eot": {
-    "file": "assets/ApercuPro-Black.f5d1aab1.eot",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Black.eot"
-  },
   "resources/fonts/apercu-pro/ApercuPro-Bold.eot": {
     "file": "assets/ApercuPro-Bold.95dce3d7.eot",
     "src": "resources/fonts/apercu-pro/ApercuPro-Bold.eot"
@@ -18,6 +14,14 @@
   "resources/fonts/apercu-pro/ApercuPro-MediumItalic.eot": {
     "file": "assets/ApercuPro-MediumItalic.9e024ec7.eot",
     "src": "resources/fonts/apercu-pro/ApercuPro-MediumItalic.eot"
+  },
+  "resources/fonts/apercu-pro/ApercuPro-Black.eot": {
+    "file": "assets/ApercuPro-Black.f5d1aab1.eot",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Black.eot"
+  },
+  "resources/fonts/apercu-pro/ApercuPro-BoldItalic.eot": {
+    "file": "assets/ApercuPro-BoldItalic.c7061820.eot",
+    "src": "resources/fonts/apercu-pro/ApercuPro-BoldItalic.eot"
   },
   "resources/fonts/apercu-pro/ApercuPro-Thin.eot": {
     "file": "assets/ApercuPro-Thin.4602193f.eot",
@@ -27,25 +31,17 @@
     "file": "assets/ApercuPro-ThinItalic.5570f5cf.eot",
     "src": "resources/fonts/apercu-pro/ApercuPro-ThinItalic.eot"
   },
-  "resources/fonts/apercu-pro/ApercuPro-BoldItalic.eot": {
-    "file": "assets/ApercuPro-BoldItalic.c7061820.eot",
-    "src": "resources/fonts/apercu-pro/ApercuPro-BoldItalic.eot"
-  },
   "resources/fonts/apercu-pro/ApercuPro-Regular.eot": {
     "file": "assets/ApercuPro-Regular.f402e9dc.eot",
     "src": "resources/fonts/apercu-pro/ApercuPro-Regular.eot"
-  },
-  "resources/fonts/apercu-pro/ApercuPro-Italic.eot": {
-    "file": "assets/ApercuPro-Italic.44f86c42.eot",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Italic.eot"
   },
   "resources/fonts/apercu-pro/ApercuPro-ExtraLightItalic.eot": {
     "file": "assets/ApercuPro-ExtraLightItalic.3796d3a4.eot",
     "src": "resources/fonts/apercu-pro/ApercuPro-ExtraLightItalic.eot"
   },
-  "resources/fonts/apercu-pro/ApercuPro-LightItalic.eot": {
-    "file": "assets/ApercuPro-LightItalic.0f00c6bc.eot",
-    "src": "resources/fonts/apercu-pro/ApercuPro-LightItalic.eot"
+  "resources/fonts/apercu-pro/ApercuPro-Italic.eot": {
+    "file": "assets/ApercuPro-Italic.44f86c42.eot",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Italic.eot"
   },
   "resources/fonts/apercu-pro/ApercuPro-Light.eot": {
     "file": "assets/ApercuPro-Light.c4bcd02e.eot",
@@ -54,6 +50,10 @@
   "resources/fonts/apercu-pro/ApercuPro-BlackItalic.eot": {
     "file": "assets/ApercuPro-BlackItalic.720cfc3f.eot",
     "src": "resources/fonts/apercu-pro/ApercuPro-BlackItalic.eot"
+  },
+  "resources/fonts/apercu-pro/ApercuPro-LightItalic.eot": {
+    "file": "assets/ApercuPro-LightItalic.0f00c6bc.eot",
+    "src": "resources/fonts/apercu-pro/ApercuPro-LightItalic.eot"
   },
   "resources/fonts/milchella/Milchella-Regular.ttf": {
     "file": "assets/Milchella-Regular.0a4253e4.ttf",
@@ -71,69 +71,73 @@
     "file": "assets/ApercuPro-Bold.c43f8c0f.woff2",
     "src": "resources/fonts/apercu-pro/ApercuPro-Bold.woff2"
   },
-  "resources/fonts/apercu-pro/ApercuPro-Black.woff2": {
-    "file": "assets/ApercuPro-Black.fb2f1bb7.woff2",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Black.woff2"
-  },
   "resources/fonts/apercu-pro/ApercuPro-MediumItalic.woff2": {
     "file": "assets/ApercuPro-MediumItalic.b2ac42f8.woff2",
     "src": "resources/fonts/apercu-pro/ApercuPro-MediumItalic.woff2"
-  },
-  "resources/fonts/apercu-pro/ApercuPro-ThinItalic.woff2": {
-    "file": "assets/ApercuPro-ThinItalic.d2b10649.woff2",
-    "src": "resources/fonts/apercu-pro/ApercuPro-ThinItalic.woff2"
   },
   "resources/fonts/apercu-pro/ApercuPro-BoldItalic.woff2": {
     "file": "assets/ApercuPro-BoldItalic.968ae24a.woff2",
     "src": "resources/fonts/apercu-pro/ApercuPro-BoldItalic.woff2"
   },
+  "resources/fonts/apercu-pro/ApercuPro-Black.woff2": {
+    "file": "assets/ApercuPro-Black.fb2f1bb7.woff2",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Black.woff2"
+  },
+  "resources/fonts/apercu-pro/ApercuPro-ThinItalic.woff2": {
+    "file": "assets/ApercuPro-ThinItalic.d2b10649.woff2",
+    "src": "resources/fonts/apercu-pro/ApercuPro-ThinItalic.woff2"
+  },
   "resources/fonts/apercu-pro/ApercuPro-Thin.woff2": {
     "file": "assets/ApercuPro-Thin.f1f4eeec.woff2",
     "src": "resources/fonts/apercu-pro/ApercuPro-Thin.woff2"
-  },
-  "resources/fonts/apercu-pro/ApercuPro-Italic.woff2": {
-    "file": "assets/ApercuPro-Italic.b8f2509c.woff2",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Italic.woff2"
   },
   "resources/fonts/apercu-pro/ApercuPro-Regular.woff2": {
     "file": "assets/ApercuPro-Regular.b0344eb2.woff2",
     "src": "resources/fonts/apercu-pro/ApercuPro-Regular.woff2"
   },
+  "resources/fonts/apercu-pro/ApercuPro-Italic.woff2": {
+    "file": "assets/ApercuPro-Italic.b8f2509c.woff2",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Italic.woff2"
+  },
   "resources/fonts/apercu-pro/ApercuPro-ExtraLightItalic.woff2": {
     "file": "assets/ApercuPro-ExtraLightItalic.e5af9234.woff2",
     "src": "resources/fonts/apercu-pro/ApercuPro-ExtraLightItalic.woff2"
-  },
-  "resources/fonts/apercu-pro/ApercuPro-Light.woff2": {
-    "file": "assets/ApercuPro-Light.d00d3996.woff2",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Light.woff2"
   },
   "resources/fonts/apercu-pro/ApercuPro-LightItalic.woff2": {
     "file": "assets/ApercuPro-LightItalic.e0ccb888.woff2",
     "src": "resources/fonts/apercu-pro/ApercuPro-LightItalic.woff2"
   },
+  "resources/fonts/apercu-pro/ApercuPro-Light.woff2": {
+    "file": "assets/ApercuPro-Light.d00d3996.woff2",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Light.woff2"
+  },
   "resources/fonts/apercu-pro/ApercuPro-BlackItalic.woff2": {
     "file": "assets/ApercuPro-BlackItalic.4ca62bee.woff2",
     "src": "resources/fonts/apercu-pro/ApercuPro-BlackItalic.woff2"
   },
-  "resources/fonts/apercu-pro/ApercuPro-ExtraLight.woff": {
-    "file": "assets/ApercuPro-ExtraLight.b916c16f.woff",
-    "src": "resources/fonts/apercu-pro/ApercuPro-ExtraLight.woff"
+  "resources/fonts/apercu-pro/ApercuPro-Bold.woff": {
+    "file": "assets/ApercuPro-Bold.f1ced95a.woff",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Bold.woff"
   },
   "resources/fonts/apercu-pro/ApercuPro-Medium.woff": {
     "file": "assets/ApercuPro-Medium.85e0cb78.woff",
     "src": "resources/fonts/apercu-pro/ApercuPro-Medium.woff"
   },
-  "resources/fonts/apercu-pro/ApercuPro-Black.woff": {
-    "file": "assets/ApercuPro-Black.f8330fee.woff",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Black.woff"
-  },
   "resources/fonts/apercu-pro/ApercuPro-MediumItalic.woff": {
     "file": "assets/ApercuPro-MediumItalic.34268ba9.woff",
     "src": "resources/fonts/apercu-pro/ApercuPro-MediumItalic.woff"
   },
-  "resources/fonts/apercu-pro/ApercuPro-Bold.woff": {
-    "file": "assets/ApercuPro-Bold.f1ced95a.woff",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Bold.woff"
+  "resources/fonts/apercu-pro/ApercuPro-BoldItalic.woff": {
+    "file": "assets/ApercuPro-BoldItalic.5d1fe01a.woff",
+    "src": "resources/fonts/apercu-pro/ApercuPro-BoldItalic.woff"
+  },
+  "resources/fonts/apercu-pro/ApercuPro-ExtraLight.woff": {
+    "file": "assets/ApercuPro-ExtraLight.b916c16f.woff",
+    "src": "resources/fonts/apercu-pro/ApercuPro-ExtraLight.woff"
+  },
+  "resources/fonts/apercu-pro/ApercuPro-Black.woff": {
+    "file": "assets/ApercuPro-Black.f8330fee.woff",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Black.woff"
   },
   "resources/fonts/apercu-pro/ApercuPro-ThinItalic.woff": {
     "file": "assets/ApercuPro-ThinItalic.dbfc94dc.woff",
@@ -143,21 +147,21 @@
     "file": "assets/ApercuPro-Thin.40de6a97.woff",
     "src": "resources/fonts/apercu-pro/ApercuPro-Thin.woff"
   },
-  "resources/fonts/apercu-pro/ApercuPro-Italic.woff": {
-    "file": "assets/ApercuPro-Italic.cf7a0eb9.woff",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Italic.woff"
-  },
   "resources/fonts/apercu-pro/ApercuPro-Regular.woff": {
     "file": "assets/ApercuPro-Regular.d79a5f42.woff",
     "src": "resources/fonts/apercu-pro/ApercuPro-Regular.woff"
   },
-  "resources/fonts/apercu-pro/ApercuPro-LightItalic.woff": {
-    "file": "assets/ApercuPro-LightItalic.351daebf.woff",
-    "src": "resources/fonts/apercu-pro/ApercuPro-LightItalic.woff"
+  "resources/fonts/apercu-pro/ApercuPro-Italic.woff": {
+    "file": "assets/ApercuPro-Italic.cf7a0eb9.woff",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Italic.woff"
   },
   "resources/fonts/apercu-pro/ApercuPro-ExtraLightItalic.woff": {
     "file": "assets/ApercuPro-ExtraLightItalic.992b2423.woff",
     "src": "resources/fonts/apercu-pro/ApercuPro-ExtraLightItalic.woff"
+  },
+  "resources/fonts/apercu-pro/ApercuPro-LightItalic.woff": {
+    "file": "assets/ApercuPro-LightItalic.351daebf.woff",
+    "src": "resources/fonts/apercu-pro/ApercuPro-LightItalic.woff"
   },
   "resources/fonts/apercu-pro/ApercuPro-Light.woff": {
     "file": "assets/ApercuPro-Light.f30a8fbd.woff",
@@ -167,14 +171,6 @@
     "file": "assets/ApercuPro-BlackItalic.cb405529.woff",
     "src": "resources/fonts/apercu-pro/ApercuPro-BlackItalic.woff"
   },
-  "resources/fonts/apercu-pro/ApercuPro-BoldItalic.woff": {
-    "file": "assets/ApercuPro-BoldItalic.5d1fe01a.woff",
-    "src": "resources/fonts/apercu-pro/ApercuPro-BoldItalic.woff"
-  },
-  "resources/fonts/apercu-pro/ApercuPro-Medium.ttf": {
-    "file": "assets/ApercuPro-Medium.5e02a16a.ttf",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Medium.ttf"
-  },
   "resources/fonts/apercu-pro/ApercuPro-Bold.ttf": {
     "file": "assets/ApercuPro-Bold.787f9f41.ttf",
     "src": "resources/fonts/apercu-pro/ApercuPro-Bold.ttf"
@@ -182,6 +178,14 @@
   "resources/fonts/apercu-pro/ApercuPro-MediumItalic.ttf": {
     "file": "assets/ApercuPro-MediumItalic.b397e15b.ttf",
     "src": "resources/fonts/apercu-pro/ApercuPro-MediumItalic.ttf"
+  },
+  "resources/fonts/apercu-pro/ApercuPro-BoldItalic.ttf": {
+    "file": "assets/ApercuPro-BoldItalic.07bd01fe.ttf",
+    "src": "resources/fonts/apercu-pro/ApercuPro-BoldItalic.ttf"
+  },
+  "resources/fonts/apercu-pro/ApercuPro-Medium.ttf": {
+    "file": "assets/ApercuPro-Medium.5e02a16a.ttf",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Medium.ttf"
   },
   "resources/fonts/apercu-pro/ApercuPro-ExtraLight.ttf": {
     "file": "assets/ApercuPro-ExtraLight.bb4074ec.ttf",
@@ -199,33 +203,29 @@
     "file": "assets/ApercuPro-Thin.0951a38a.ttf",
     "src": "resources/fonts/apercu-pro/ApercuPro-Thin.ttf"
   },
-  "resources/fonts/apercu-pro/ApercuPro-Italic.ttf": {
-    "file": "assets/ApercuPro-Italic.22ab9184.ttf",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Italic.ttf"
-  },
   "resources/fonts/apercu-pro/ApercuPro-Regular.ttf": {
     "file": "assets/ApercuPro-Regular.879a6c8a.ttf",
     "src": "resources/fonts/apercu-pro/ApercuPro-Regular.ttf"
   },
-  "resources/fonts/apercu-pro/ApercuPro-LightItalic.ttf": {
-    "file": "assets/ApercuPro-LightItalic.733b0b2b.ttf",
-    "src": "resources/fonts/apercu-pro/ApercuPro-LightItalic.ttf"
+  "resources/fonts/apercu-pro/ApercuPro-Italic.ttf": {
+    "file": "assets/ApercuPro-Italic.22ab9184.ttf",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Italic.ttf"
   },
   "resources/fonts/apercu-pro/ApercuPro-ExtraLightItalic.ttf": {
     "file": "assets/ApercuPro-ExtraLightItalic.afdb6932.ttf",
     "src": "resources/fonts/apercu-pro/ApercuPro-ExtraLightItalic.ttf"
   },
-  "resources/fonts/apercu-pro/ApercuPro-Light.ttf": {
-    "file": "assets/ApercuPro-Light.a74a46f2.ttf",
-    "src": "resources/fonts/apercu-pro/ApercuPro-Light.ttf"
+  "resources/fonts/apercu-pro/ApercuPro-LightItalic.ttf": {
+    "file": "assets/ApercuPro-LightItalic.733b0b2b.ttf",
+    "src": "resources/fonts/apercu-pro/ApercuPro-LightItalic.ttf"
   },
   "resources/fonts/apercu-pro/ApercuPro-BlackItalic.ttf": {
     "file": "assets/ApercuPro-BlackItalic.c0456780.ttf",
     "src": "resources/fonts/apercu-pro/ApercuPro-BlackItalic.ttf"
   },
-  "resources/fonts/apercu-pro/ApercuPro-BoldItalic.ttf": {
-    "file": "assets/ApercuPro-BoldItalic.07bd01fe.ttf",
-    "src": "resources/fonts/apercu-pro/ApercuPro-BoldItalic.ttf"
+  "resources/fonts/apercu-pro/ApercuPro-Light.ttf": {
+    "file": "assets/ApercuPro-Light.a74a46f2.ttf",
+    "src": "resources/fonts/apercu-pro/ApercuPro-Light.ttf"
   },
   "resources/js/app.js": {
     "file": "assets/app.18fcebb4.js",
@@ -233,7 +233,7 @@
     "isEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app.b38e4beb.css",
+    "file": "assets/app.443e6429.css",
     "src": "resources/css/app.css",
     "isEntry": true
   }

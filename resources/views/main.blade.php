@@ -259,7 +259,7 @@
                                         <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
                                         <h3>{{ $item->title }}</h3>
                                     </div> 
-                                    <a href="{{ $project_url }}" class="viva-card__link"></a>
+                                    <a href="{{ $project_url }}" class="viva-card__link" aria-label="Go to Kelapa Gading Resident project page"></a>
                                 </div>
                             </div>
                         @endif
@@ -273,7 +273,7 @@
                                                 <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
                                                 <h3>{{ $item->title }}</h3>
                                             </div> 
-                                            <a href="{{ $project_url }}" class="viva-card__link"></a>
+                                            <a href="{{ $project_url }}" class="viva-card__link" aria-label="Go to Meiling Lee Clinic project page"></a>
                                         </div>
                                     </div>
                         @endif
@@ -285,7 +285,7 @@
                                                 <i class="bi bi-link-45deg" style="font-size: 2rem;"></i>
                                                 <h3>{{ $item->title }}</h3>
                                             </div> 
-                                            <a href="{{ $project_url }}" class="viva-card__link"></a>
+                                            <a href="{{ $project_url }}" class="viva-card__link" aria-label="Go to Puri Kencana Resident project page"></a>
                                         </div>
                                     </div>
                                 </div>

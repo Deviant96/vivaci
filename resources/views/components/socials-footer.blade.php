@@ -1,6 +1,6 @@
 <div class="socials">
     @if (setting('company.social_instagram'))
-        <a href="{{ setting('company.social_instagram') }}" target="_blank">
+        <a href="{{ setting('company.social_instagram') }}" target="_blank" aria-label="Instagram icon link">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#555555" viewBox="0 0 64 64" width="64" height="64">
                 <style></style>
                 <path fill-rule="evenodd"
@@ -9,7 +9,7 @@
         </a>
     @endif
     @if (setting('company.social_facebook'))
-        <a href="{{ setting('company.social_facebook') }}" target="_blank">
+        <a href="{{ setting('company.social_facebook') }}" target="_blank" aria-label="Facebook icon link">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#555555" viewBox="0 0 64 64" width="64" height="64">
                 <style></style>
                 <path
@@ -18,7 +18,7 @@
         </a>
     @endif
     @if (setting('company.social_youtube'))
-        <a href="{{ setting('company.social_youtube') }}" target="_blank">
+        <a href="{{ setting('company.social_youtube') }}" target="_blank" aria-label="Youtube icon link">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#555555" viewBox="0 0 64 64" width="64" height="64">
                 <style></style>
                 <path fill-rule="evenodd"
@@ -27,7 +27,7 @@
         </a>
     @endif
     @if (setting('company.social_twitter'))
-        <a href="{{ setting('company.social_twitter') }}" target="_blank">
+        <a href="{{ setting('company.social_twitter') }}" target="_blank" aria-label="Twitter icon link">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" fill="#555555" viewBox="0 0 64 64" width="64" height="64">
                 <style></style>
                 <path fill-rule="evenodd"
